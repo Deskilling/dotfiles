@@ -14,6 +14,11 @@
     "flakes"
   ];
 
+  nix.settings = {
+    max-jobs = "auto";
+    cores = 0;
+  };
+
   system.stateVersion = "25.11";
 
   security.sudo.extraConfig = ''
