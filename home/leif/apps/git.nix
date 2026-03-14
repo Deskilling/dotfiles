@@ -2,9 +2,10 @@
 {
   programs.git = {
     enable = true;
-
-    userEmail = "81562562+Deskilling@users.noreply.github.com";
-    userName = "Leif Haberecht";
+    settings = {
+      user.email = "81562562+Deskilling@users.noreply.github.com";
+      user.name = "Leif Haberecht";
+    };
   };
 
   programs.keychain = {
