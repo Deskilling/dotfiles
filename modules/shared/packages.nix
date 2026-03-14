@@ -16,6 +16,7 @@
     ffmpeg
     unrar
     btop
+    kitty
   ];
 
   programs.gamemode.enable = true;
