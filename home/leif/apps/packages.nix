@@ -10,7 +10,6 @@
     nil
     nixd
 
-    bitwarden-desktop
     bottles
     r2modman
 
@@ -20,8 +19,10 @@
     haruna
     obs-studio
     prismlauncher
+    labymod-launcher
 
     systemdgenie
+    kdePackages.kdenlive
     kdePackages.filelight
   ];
 }

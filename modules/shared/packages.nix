@@ -17,6 +17,7 @@
     unrar
     btop
     kitty
+    fresh-editor
   ];
 
   programs.gamemode.enable = true;
