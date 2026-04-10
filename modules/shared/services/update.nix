@@ -7,9 +7,5 @@
     allowReboot = false;
   };
 
-  systemd.timers.nixos-upgrade = {
-    timerConfig = {
-      Persistent = true;
-    };
-  };
+  systemd.timers.nixos-upgrade.timerConfig.Persistent = true;
 }
