@@ -16,7 +16,6 @@
     ffmpeg
     unrar
     btop
-    kitty
     fresh-editor
   ];
 

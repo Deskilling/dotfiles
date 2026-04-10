@@ -1,8 +1,8 @@
-{ pkgs, username, ... }:
+{ pkgs, ... }:
 {
-  users.users.${username} = {
+  users.users.leif = {
     isNormalUser = true;
-    description = username;
+    description = "Leif";
     shell = pkgs.fish;
     extraGroups = [
       "networkmanager"
