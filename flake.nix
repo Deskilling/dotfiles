@@ -16,14 +16,11 @@
       home-manager,
       ...
     }:
-    let
-      username = "leif";
-    in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit username self; };
+          specialArgs = { inherit self; };
           modules = [
             ./hosts/desktop/default.nix
             home-manager.nixosModules.home-manager
