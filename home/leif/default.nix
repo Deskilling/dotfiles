@@ -1,8 +1,9 @@
-{ username, ... }:
+{ username, self, ... }:
 {
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.backupFileExtension = "backup";
+  home-manager.extraSpecialArgs = { inherit username self; };
   home-manager.users.${username} =
     { config, lib, ... }:
     {
