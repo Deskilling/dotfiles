@@ -11,6 +11,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       home-manager,
       ...
@@ -22,7 +23,7 @@
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit username; };
+          specialArgs = { inherit username self; };
           modules = [
             ./hosts/desktop/default.nix
             home-manager.nixosModules.home-manager
