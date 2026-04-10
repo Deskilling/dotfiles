@@ -2,10 +2,10 @@
 {
   home.packages = with pkgs; [
     librewolf
-    zed-editor
     lazygit
     micro
     fzf
+    zed-editor
 
     nil
     nixd

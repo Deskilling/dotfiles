@@ -7,6 +7,7 @@
       noto-fonts
       noto-fonts-color-emoji
     ];
+
     fontconfig = {
       enable = true;
       defaultFonts = {

@@ -11,16 +11,11 @@
 
     ../../modules/profiles/plasma.nix
 
-    ../../modules/shared/boot.nix
-    ../../modules/shared/cleanup.nix
-    ../../modules/shared/displaymanager.nix
-    ../../modules/shared/fonts.nix
-    ../../modules/shared/hardware.nix
-    ../../modules/shared/locale.nix
-    ../../modules/shared/networking.nix
-    ../../modules/shared/packages.nix
-    ../../modules/shared/update.nix
-    ../../modules/shared/users.nix
+    ./modules/boot.nix
+    ./modules/hardware.nix
+    ./modules/packages.nix
+    ./modules/services.nix
+    ./modules/system.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
