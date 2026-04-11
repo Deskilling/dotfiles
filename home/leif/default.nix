@@ -4,7 +4,7 @@
 }:
 
 {
-  imports = lib.filesystem.listFilesRecursive ./apps;
+  imports = lib.filesystem.listFilesRecursive ./config;
 
   home.username = "leif";
   home.homeDirectory = "/home/leif";
