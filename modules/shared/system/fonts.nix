@@ -3,15 +3,16 @@
   fonts = {
     packages = with pkgs; [
       inter
-      jetbrains-mono
       noto-fonts
       noto-fonts-color-emoji
+      nerd-fonts.jetbrains-mono
     ];
 
     fontconfig = {
       enable = true;
+
       defaultFonts = {
-        monospace = [ "JetBrains Mono" ];
+        monospace = [ "JetBrainsMono Nerd Font" ];
         serif = [ "Noto Serif" ];
         sansSerif = [
           "Inter"
