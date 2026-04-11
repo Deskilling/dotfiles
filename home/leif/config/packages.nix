@@ -15,7 +15,6 @@
 
     cider-2
     xclicker
-    cemu
     haruna
     obs-studio
     prismlauncher
