@@ -34,7 +34,7 @@
     Defaults pwfeedback
   '';
 
-  home-manager.users.leif = import ../../home/leif;
+  home-manager.users.leif = import ../../home/leif/linux.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = {
     inherit self;
