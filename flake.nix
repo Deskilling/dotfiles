@@ -40,5 +40,13 @@
           ];
         };
       };
+
+      homeConfigurations = {
+            "leif@mac" = home-manager.lib.homeManagerConfiguration {
+              pkgs = nixpkgs.legacyPackages."aarch64-darwin";
+              extraSpecialArgs = { inherit self; };
+              modules = [ ./hosts/mac/default.nix ];
+            };
+        };
     };
 }
