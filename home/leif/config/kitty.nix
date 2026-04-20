@@ -70,7 +70,7 @@
     extraConfig = ''
       font_features JetBrainsMonoNF-Regular +liga +calt
       font_features JetBrainsMonoNF-Bold +liga +calt
-      include ~/.config/kitty/colors.conf
+      include ~/.config/kitty/themes/noctalia.conf
     '';
   };
 }

@@ -5,6 +5,8 @@
     lazygit
     micro
     fzf
+    
+    fresh-editor
 
     nil
     nixd
@@ -20,8 +22,6 @@
     prismlauncher
     labymod-launcher
 
-    systemdgenie
     kdePackages.kdenlive
-    kdePackages.filelight
   ];
 }

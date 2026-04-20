@@ -1,31 +1,42 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    rofi
-    mako
-    libnotify
     hyprlock
     hypridle
-    awww
     wl-clipboard
     grim
     slurp
     brightnessctl
     playerctl
     polkit_gnome
+    
+    hyprcursor
+    kdePackages.breeze
   ];
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.kdePackages.breeze;
+    name = "breeze_cursors";
+    size = 24;
+  };
+  
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
+    		env = [
+		  "XCURSOR_THEME,breeze_cursors"
+		  "XCURSOR_SIZE,24"
+		  "HYPRCURSOR_THEME,breeze_cursors"
+		  "HYPRCURSOR_SIZE,24"
+		];
+    
+    
       monitor = "DP-1,2560x1440@143.86,0x0,1";
       exec-once = [
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
-        "awww-daemon"
-        "awww img /home/leif/Pictures/wallpaper.png"
-        "matugen image /home/leif/Pictures/wallpaper.png"
+        "noctalia-shell"
         "hypridle"
-        "mako"
       ];
 
       general = {
@@ -68,7 +79,8 @@
 
       "$mod" = "CTRL ALT SUPER";
       bind = [
-        "$mod, space, exec, rofi -show drun"
+        "$mod, SPACE, exec, noctalia-shell ipc call launcher toggle"
+        
         "$mod, left, movefocus, l"
         "$mod, down, movefocus, d"
         "$mod, up, movefocus, u"
@@ -106,7 +118,12 @@
         "$mod SHIFT, c, movetoworkspace, 11"
         "$mod SHIFT, v, movetoworkspace, 12"
         "$mod SHIFT, m, movetoworkspace, 13"
+        
         "ALT, F4, killactive"
+        
+       ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+       ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+       ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       ];
 
       bindm = [
@@ -116,11 +133,7 @@
     };
 
     extraConfig = ''
-      source = ~/.config/hypr/colors.conf
-      general {
-        col.active_border = $primary_rgba
-        col.inactive_border = $surface_rgba
-      }
+      source = ~/.config/hypr/noctalia/noctalia-colors.conf
     '';
   };
 }
