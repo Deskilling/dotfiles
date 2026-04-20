@@ -11,7 +11,7 @@
             capslock = "overload(hyper, esc)";
           };
 
-          "hyper:C-M-S-A" = { };
+          "hyper:C-M-A" = { };
         };
       };
     };
