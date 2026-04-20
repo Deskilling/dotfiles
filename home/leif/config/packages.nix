@@ -5,10 +5,10 @@
     lazygit
     micro
     fzf
-    zed-editor
 
     nil
     nixd
+    nixfmt
 
     bottles
     r2modman
