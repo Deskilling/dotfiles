@@ -12,9 +12,8 @@
     ./config/fish.nix
     ./config/git.nix
 
-    ./config/matugen.nix
-
     ./config/hyprland.nix
+    ./config/noctalia.nix
     ./config/kitty.nix
 
     ./config/vesktop.nix
