@@ -1,4 +1,3 @@
-# matugen.nix
 { pkgs, config, ... }:
 {
   home.packages = with pkgs; [

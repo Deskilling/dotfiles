@@ -1,9 +1,5 @@
-# hyprland.nix
 { pkgs, ... }:
 {
-  imports = [
-    ./matugen.nix
-  ];
   home.packages = with pkgs; [
     rofi
     mako

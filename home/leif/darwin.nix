@@ -5,9 +5,9 @@
 
 {
   imports = [
-    ./config/cli/btop.nix
-    ./config/cli/fastfetch.nix
-    ./config/cli/git.nix
+    ./config/btop.nix
+    ./config/fastfetch.nix
+    ./config/git.nix
   ];
 
   home.username = "leifhaberecht";
