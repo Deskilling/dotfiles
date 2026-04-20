@@ -9,6 +9,7 @@
   imports = [
     ./hardware-configuration.nix
 
+    ../../modules/profiles/hyprland.nix
     ../../modules/profiles/plasma.nix
 
     ./modules/boot.nix
@@ -34,6 +35,14 @@
     Defaults pwfeedback
   '';
 
+  security.polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+      if (subject.user === "leif") {
+        return polkit.Result.YES;
+      }
+    });
+  '';
+
   home-manager.users.leif = import ../../home/leif/linux.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = {
@@ -41,4 +50,5 @@
   };
 
   profiles.plasma.enable = true;
+  profiles.hyprland.enable = true;
 }
