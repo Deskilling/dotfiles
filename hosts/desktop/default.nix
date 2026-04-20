@@ -49,6 +49,6 @@
     inherit self;
   };
 
-  profiles.plasma.enable = true;
+  profiles.plasma.enable = false;
   profiles.hyprland.enable = true;
 }
