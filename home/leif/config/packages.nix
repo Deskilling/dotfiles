@@ -9,7 +9,8 @@
     fresh-editor
 
     nautilus
-    
+    celluloid
+
     nil
     nixd
     nixfmt
@@ -19,7 +20,6 @@
 
     cider-2
     xclicker
-    haruna
     obs-studio
     prismlauncher
     labymod-launcher
