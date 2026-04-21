@@ -8,6 +8,8 @@
 
     fresh-editor
 
+    nautilus
+    
     nil
     nixd
     nixfmt
