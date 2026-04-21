@@ -42,13 +42,17 @@
       }
     });
   '';
-
+  
   home-manager.users.leif = import ../../home/leif/linux.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = {
     inherit self;
   };
 
+  environment.etc."librewolf/policies/policies.json" = {
+  source = "/etc/firefox/policies/policies.json";
+  };
+  
   profiles.plasma.enable = false;
   profiles.hyprland.enable = true;
 }
