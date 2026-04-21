@@ -142,6 +142,10 @@
             enabled = true;
             id = "discord";
           }
+          {
+            enabled = true;
+            id = "btop";
+          }
         ];
       };
 

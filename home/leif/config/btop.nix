@@ -4,7 +4,7 @@
     enable = true;
 
     settings = {
-      color_theme = "tokyo-night";
+      color_theme = "noctalia";
       theme_background = false;
 
       mem_below_net = true;
