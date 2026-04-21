@@ -5,7 +5,7 @@
     lazygit
     micro
     fzf
-    
+
     fresh-editor
 
     nil

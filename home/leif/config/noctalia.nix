@@ -9,7 +9,7 @@
         barType = "floating";
         backgroundOpacity = 0.43;
         density = "comfortable";
-        
+
         widgets = {
           left = [
             {
@@ -129,6 +129,14 @@
           {
             enabled = true;
             id = "hyprland";
+          }
+          {
+            enabled = true;
+            id = "gtk";
+          }
+          {
+            enabled = true;
+            id = "qt";
           }
         ];
       };
