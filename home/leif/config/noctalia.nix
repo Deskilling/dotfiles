@@ -150,6 +150,10 @@
             enabled = true;
             id = "pywalfox";
           }
+          {
+            enabled = true;
+            id = "zed";
+          }
         ];
       };
 
