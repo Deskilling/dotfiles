@@ -15,6 +15,8 @@
     ./config/hyprland.nix
     ./config/noctalia.nix
     ./config/kitty.nix
+    ./config/qt.nix
+    ./config/gtk.nix
 
     ./config/vesktop.nix
   ];
