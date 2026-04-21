@@ -17,6 +17,7 @@
     ./config/kitty.nix
     ./config/qt.nix
     ./config/gtk.nix
+    ./config/librewolf.nix
 
     ./config/vesktop.nix
   ];
