@@ -138,6 +138,10 @@
             enabled = true;
             id = "qt";
           }
+          {
+            enabled = true;
+            id = "discord";
+          }
         ];
       };
 
