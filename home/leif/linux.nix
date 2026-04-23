@@ -1,5 +1,6 @@
 {
   lib,
+  pkgs,
   ...
 }:
 
@@ -9,7 +10,6 @@
 
     ./config/btop.nix
     ./config/fastfetch.nix
-    ./config/fish.nix
     ./config/git.nix
 
     ./config/hyprland.nix
@@ -20,9 +20,13 @@
     ./config/librewolf.nix
     ./config/zed.nix
 
+    ./config/shell.nix
+
     ./config/vesktop.nix
   ];
+
   home.username = "leif";
   home.homeDirectory = "/home/leif";
+
   home.stateVersion = "25.11";
 }
