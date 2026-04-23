@@ -8,4 +8,6 @@
     unrar
     btop
   ];
+  
+  programs.zsh.enable = true;
 }

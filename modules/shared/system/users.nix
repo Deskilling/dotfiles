@@ -3,7 +3,7 @@
   users.users.leif = {
     isNormalUser = true;
     description = "Leif";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
