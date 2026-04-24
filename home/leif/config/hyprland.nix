@@ -14,13 +14,6 @@
     kdePackages.breeze
   ];
 
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.kdePackages.breeze;
-    name = "breeze_cursors";
-    size = 24;
-  };
-
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {

@@ -13,6 +13,7 @@
     ./config/git.nix
 
     ./config/hyprland.nix
+    ./config/pointer.nix
     ./config/noctalia.nix
     ./config/kitty.nix
     ./config/qt.nix
