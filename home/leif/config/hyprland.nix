@@ -1,14 +1,12 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    hyprlock
-    hypridle
     wl-clipboard
     grim
     slurp
+
     brightnessctl
     playerctl
-    polkit_gnome
 
     hyprcursor
     kdePackages.breeze
@@ -27,16 +25,18 @@
 
       monitor = "DP-1,2560x1440@143.86,0x0,1";
       exec-once = [
-        "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "noctalia-shell"
-        "hypridle"
       ];
 
       general = {
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
-        layout = "dwindle";
+        layout = "scrolling";
+      };
+
+      scrolling = {
+        column_width = 0.5;
       };
 
       decoration = {
@@ -74,17 +74,26 @@
       bind = [
         "$mod, SPACE, exec, noctalia-shell ipc call launcher toggle"
 
+        "$mod, e, layoutmsg, move +col"
+        "$mod, q, layoutmsg, move -col"
+
         "$mod, left, movefocus, l"
         "$mod, down, movefocus, d"
         "$mod, up, movefocus, u"
         "$mod, right, movefocus, r"
+
         "$mod, j, movewindow, l"
         "$mod, k, movewindow, d"
         "$mod, i, movewindow, u"
         "$mod, l, movewindow, r"
+
         "$mod, z, layoutmsg, tiling"
         "$mod, x, togglefloating"
-        "$mod, f, fullscreen"
+        "$mod, g, fullscreen"
+
+        "$mod, f, layoutmsg, colresize 1.0"
+        "$mod, d, layoutmsg, colresize 0.5"
+
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"
@@ -92,12 +101,7 @@
         "$mod, 5, workspace, 5"
         "$mod, 6, workspace, 6"
         "$mod, 7, workspace, 7"
-        "$mod, w, workspace, 8"
-        "$mod, d, workspace, 9"
-        "$mod, q, workspace, 10"
-        "$mod, c, workspace, 11"
-        "$mod, v, workspace, 12"
-        "$mod, m, workspace, 13"
+
         "$mod SHIFT, 1, movetoworkspace, 1"
         "$mod SHIFT, 2, movetoworkspace, 2"
         "$mod SHIFT, 3, movetoworkspace, 3"
@@ -105,12 +109,6 @@
         "$mod SHIFT, 5, movetoworkspace, 5"
         "$mod SHIFT, 6, movetoworkspace, 6"
         "$mod SHIFT, 7, movetoworkspace, 7"
-        "$mod SHIFT, w, movetoworkspace, 8"
-        "$mod SHIFT, d, movetoworkspace, 9"
-        "$mod SHIFT, q, movetoworkspace, 10"
-        "$mod SHIFT, c, movetoworkspace, 11"
-        "$mod SHIFT, v, movetoworkspace, 12"
-        "$mod SHIFT, m, movetoworkspace, 13"
 
         "ALT, F4, killactive"
 

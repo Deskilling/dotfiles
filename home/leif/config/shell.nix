@@ -46,7 +46,7 @@
         truncate_to_repo = false;
         format = "[$path](fg:5) ";
       };
-      
+
       character = {
         success_symbol = "[❯](fg:2)";
         error_symbol = "[❯](fg:1)";
