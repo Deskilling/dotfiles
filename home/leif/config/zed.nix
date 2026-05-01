@@ -5,7 +5,7 @@
     mutableUserSettings = false;
 
     userSettings = {
-      theme = "Noctalia Dark Transparent";
+      theme = "Noctalia Dark";
       icon_theme = "Catppuccin Mocha";
       title_bar = {
         show_sign_in = false;
