@@ -8,7 +8,7 @@
     fresh-editor
 
     nautilus
-    (celluloid.override { youtubeSupport = false; })
+    mpv
     qview
     
     nil
