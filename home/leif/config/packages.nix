@@ -14,7 +14,6 @@
     nixd
     nixfmt
 
-    bottles
     r2modman
 
     cider-2
