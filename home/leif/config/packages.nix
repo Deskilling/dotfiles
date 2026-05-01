@@ -8,8 +8,9 @@
     fresh-editor
 
     nautilus
-    celluloid
-
+    (celluloid.override { youtubeSupport = false; })
+    qview
+    
     nil
     nixd
     nixfmt
