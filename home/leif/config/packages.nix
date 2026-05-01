@@ -14,6 +14,9 @@
     nil
     nixd
     nixfmt
+    
+    go
+    gopls
 
     r2modman
 
