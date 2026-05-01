@@ -39,14 +39,6 @@
   security.sudo.extraConfig = ''
     Defaults pwfeedback
   '';
-
-  security.polkit.extraConfig = ''
-    polkit.addRule(function(action, subject) {
-      if (subject.user === "leif") {
-        return polkit.Result.YES;
-      }
-    });
-  '';
   
   home-manager.users.leif = import ../../home/leif/linux.nix;
   home-manager.useGlobalPkgs = true;
