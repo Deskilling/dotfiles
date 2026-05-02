@@ -10,11 +10,11 @@
     nautilus
     mpv
     qview
-    
+
     nil
     nixd
     nixfmt
-    
+
     go
     gopls
 

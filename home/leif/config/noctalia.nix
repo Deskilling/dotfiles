@@ -13,29 +13,6 @@
         widgets = {
           left = [
             {
-              characterCount = 2;
-              colorizeIcons = false;
-              emptyColor = "secondary";
-              enableScrollWheel = true;
-              focusedColor = "primary";
-              followFocusedScreen = true;
-              fontWeight = "bold";
-              groupedBorderOpacity = 1;
-              hideUnoccupied = false;
-              iconScale = 0.8;
-              id = "Workspace";
-              labelMode = "index";
-              occupiedColor = "secondary";
-              pillSize = 0.6;
-              showApplications = true;
-              showApplicationsHover = false;
-              showBadge = true;
-              showLabelsOnlyWhenOccupied = true;
-              unfocusedIconsOpacity = 1;
-            }
-          ];
-          center = [
-            {
               compactMode = false;
               hideMode = "hidden";
               id = "MediaMini";
@@ -55,6 +32,29 @@
               hideWhenIdle = false;
               id = "AudioVisualizer";
               width = 200;
+            }
+          ];
+          center = [
+            {
+              characterCount = 2;
+              colorizeIcons = false;
+              emptyColor = "secondary";
+              enableScrollWheel = true;
+              focusedColor = "primary";
+              followFocusedScreen = true;
+              fontWeight = "bold";
+              groupedBorderOpacity = 1;
+              hideUnoccupied = false;
+              iconScale = 0.8;
+              id = "Workspace";
+              labelMode = "index";
+              occupiedColor = "secondary";
+              pillSize = 0.6;
+              showApplications = true;
+              showApplicationsHover = false;
+              showBadge = true;
+              showLabelsOnlyWhenOccupied = true;
+              unfocusedIconsOpacity = 1;
             }
           ];
           right = [
