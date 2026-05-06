@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   hardware.enableRedistributableFirmware = true;
   hardware.cpu.amd.updateMicrocode = true;
@@ -7,4 +7,6 @@
     enable = true;
     enable32Bit = true;
   };
+  
+  hardware.amdgpu.opencl.enable = true;
 }

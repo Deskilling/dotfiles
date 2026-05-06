@@ -20,6 +20,8 @@
 
     r2modman
 
+    bazaar
+    heroic
     cider-2
     xclicker
     obs-studio
