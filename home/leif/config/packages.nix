@@ -19,6 +19,7 @@
     gopls
 
     r2modman
+    vscodium
 
     bazaar
     heroic

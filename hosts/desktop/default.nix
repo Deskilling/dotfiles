@@ -30,16 +30,16 @@
   nix.settings = {
     max-jobs = "auto";
     cores = 0;
-    
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
   security.sudo.extraConfig = ''
     Defaults pwfeedback
   '';
-  
+
   home-manager.users.leif = import ../../home/leif/linux.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = {
@@ -47,9 +47,9 @@
   };
 
   environment.etc."librewolf/policies/policies.json" = {
-  source = "/etc/firefox/policies/policies.json";
+    source = "/etc/firefox/policies/policies.json";
   };
-  
+
   profiles.plasma.enable = false;
   profiles.hyprland.enable = true;
 }

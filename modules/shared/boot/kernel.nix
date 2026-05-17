@@ -7,7 +7,7 @@
     "nowatchdog"
     "nmi_watchdog=0"
     "tsc=nowatchdog"
-    
+
     "amd_pstate=active"
   ];
 }
