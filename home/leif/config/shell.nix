@@ -65,6 +65,15 @@
     nix-direnv.enable = true;
   };
 
+  programs.nh = {
+    enable = true;
+    flake = "/etc/nixos";
+    clean = {
+      enable = true;
+      extraArgs = "--keep-since 14d";
+    };
+  };
+
   programs.zsh = {
     enable = true;
     initContent = ''
@@ -100,11 +109,11 @@
     '';
 
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
-      update = "sudo nix flake update --flake /etc/nixos";
-      config = "sudo fresh /etc/nixos/";
+      rebuild = "nh os switch";
+      update = "nh os switch --update";
+      config = "udo -E codium --user-data-dir /home/leif/Documents/VscodeSudo --no-sandbox";
       generations = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
-      gcl = "nix-collect-garbage -d";
+      gcl = "nh clean all";
     };
   };
 }
