@@ -111,7 +111,7 @@
     shellAliases = {
       rebuild = "nh os switch";
       update = "nh os switch --update";
-      config = "udo -E codium --user-data-dir /home/leif/Documents/VscodeSudo --no-sandbox";
+      config = "sudo -E codium --user-data-dir /home/leif/Documents/VscodeSudo --no-sandbox";
       generations = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
       gcl = "nh clean all";
     };
