@@ -1,0 +1,6 @@
+{ ... }:
+{
+  programs.vscodium = {
+    enable = true;
+  };
+}
