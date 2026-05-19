@@ -27,7 +27,7 @@
       add_newline = false;
 
       format = ''
-        [╭](dimmed) $username@$hostname $directory
+        [╭](dimmed) $username@$hostname $directory$env_var
         [╰](dimmed) $character
       '';
 
@@ -51,7 +51,18 @@
         success_symbol = "[❯](fg:2)";
         error_symbol = "[❯](fg:1)";
       };
+
+      env_var = {
+        variable = "DIRENV_DIR";
+        format = "[❄ flake](fg:4)";
+      };
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.zsh = {
