@@ -1,6 +1,6 @@
 { ... }:
 {
   imports = [
-    ../../home/leif/darwin.nix
+    ../../home/leif/mac.nix
   ];
 }
