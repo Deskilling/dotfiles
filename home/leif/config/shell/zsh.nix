@@ -2,36 +2,53 @@
 {
   programs.zsh = {
     enable = true;
+    autosuggestion = {
+      enable = true;
+    };
+
+    syntaxHighlighting = {
+      enable = true;
+    };
+
+    historySubstringSearch = {
+      enable = true;
+    };
+
+    history = {
+      size       = 10000;
+      save       = 10000;
+      path       = "$HOME/.zsh_history";
+      share      = true;
+      ignoreDups = true;
+      ignoreSpace = true;
+      append     = true;
+    };
+
+    plugins = [
+      {
+        name = "fzf-tab";
+        src = pkgs.zsh-fzf-tab;
+        file = "share/fzf-tab/fzf-tab.plugin.zsh";
+      }
+    ];
+
     initContent = ''
-      source ${pkgs.zinit}/share/zinit/zinit.zsh
-
       unsetopt correct
-
-      HISTSIZE=10000
-      SAVEHIST=10000
-      HISTFILE=~/.zsh_history
-
-      setopt appendhistory sharehistory hist_ignore_dups hist_ignore_space autocd interactivecomments
+      setopt autocd interactivecomments
 
       bindkey '^R' fzf-history-widget
 
-      zinit wait'0a' lucid for \
-      zdharma-continuum/fast-syntax-highlighting \
-      zsh-users/zsh-autosuggestions \
-      zsh-users/zsh-history-substring-search \
-      Aloxaf/fzf-tab \
-      zsh-users/zsh-completions
-
-      autoload -Uz compinit
-      compinit -C
-                
       zstyle ':fzf-tab:*' fzf-flags \
-      '--color=bg+:-1,bg:-1,fg:-1,fg+:5' \
-      '--color=hl:2,hl+:2,info:3,prompt:5,pointer:5,marker:6' \
-      '--color=fg+:5,gutter:-1' \
-      '--pointer=→' \
-      '--border=rounded' \
-      '--gutter= '
+        '--height=40%' \
+        '--layout=reverse' \
+        '--border=rounded' \
+        '--color=bg+:-1,bg:-1,fg:-1,fg+:5' \
+        '--color=hl:2,hl+:2,info:3,prompt:5,pointer:5,marker:6' \
+        '--color=fg+:5,gutter:-1' \
+        '--pointer=→' \
+        '--gutter= '
+
+      eval "$(cde-bin init zsh)"
     '';
 
     shellAliases = {
