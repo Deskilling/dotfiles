@@ -16,9 +16,11 @@
     ./config/gui/essential.nix
     ./config/gui/cider.nix
     ./config/gui/games.nix
+    ./config/gui/jetbrains.nix
     ./config/gui/kitty.nix
     ./config/gui/librewolf.nix
     ./config/gui/obs.nix
+    ./config/gui/pear.nix
     ./config/gui/prismlauncher.nix
     ./config/gui/vesktop.nix
     ./config/gui/vscodium.nix
