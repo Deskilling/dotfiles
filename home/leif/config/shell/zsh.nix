@@ -15,13 +15,13 @@
     };
 
     history = {
-      size       = 10000;
-      save       = 10000;
-      path       = "$HOME/.zsh_history";
-      share      = true;
+      size = 10000;
+      save = 10000;
+      path = "$HOME/.zsh_history";
+      share = true;
       ignoreDups = true;
       ignoreSpace = true;
-      append     = true;
+      append = true;
     };
 
     plugins = [
@@ -48,6 +48,7 @@
         '--pointer=→' \
         '--gutter= '
 
+      export PATH="$PATH:/home/leif/Documents/Git/cde/bin"
       eval "$(cde-bin init zsh)"
     '';
 
