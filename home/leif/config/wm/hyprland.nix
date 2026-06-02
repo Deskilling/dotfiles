@@ -42,7 +42,7 @@
 
       monitor = "DP-1,2560x1440@143.86,0x0,1";
       exec-once = [
-        "noctalia-shell"
+        "noctalia"
       ];
 
       general = {
@@ -89,7 +89,7 @@
 
       "$mod" = "CTRL ALT SUPER";
       bind = [
-        "$mod, SPACE, exec, noctalia-shell ipc call launcher toggle"
+        "$mod, SPACE, exec, noctalia msg panel-open launcher"
 
         "$mod, e, layoutmsg, move +col"
         "$mod, q, layoutmsg, move -col"
@@ -139,9 +139,5 @@
         "$mod, mouse:273, resizewindow"
       ];
     };
-
-    extraConfig = ''
-      source = ~/.config/hypr/noctalia/noctalia-colors.conf
-    '';
   };
 }
