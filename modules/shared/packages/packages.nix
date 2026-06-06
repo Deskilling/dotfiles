@@ -6,6 +6,7 @@
     fontconfig
     ffmpeg
     unrar
+    unzip
     btop
   ];
 
