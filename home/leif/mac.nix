@@ -12,6 +12,9 @@
     ./config/cli/lazygit.nix
     ./config/cli/nix.nix
 
+    # gui
+    ./config/gui/zed.nix
+
     # shell
     ./config/shell/direnv.nix
     ./config/shell/fzf.nix
