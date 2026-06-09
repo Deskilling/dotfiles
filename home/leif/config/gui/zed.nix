@@ -91,7 +91,6 @@
       };
 
       title_bar = {
-        show_branch_icon = true;
         show_user_picture = false;
         show_sign_in = false;
       };
