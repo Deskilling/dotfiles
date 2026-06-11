@@ -11,12 +11,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell/v5";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,7 +22,6 @@
       self,
       nixpkgs,
       home-manager,
-      plasma-manager,
       noctalia,
       ...
     }:
@@ -42,7 +35,6 @@
             home-manager.nixosModules.home-manager
             {
               home-manager.sharedModules = [
-                plasma-manager.homeModules.plasma-manager
                 noctalia.homeModules.default
               ];
             }
