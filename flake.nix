@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs = {
-      url = "github:nixos/nixpkgs/d233902339c02a9c334e7e593de68855ad26c4cb";
+      url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
     home-manager = {
@@ -12,7 +12,7 @@
     };
 
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell/v5";
+      url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
