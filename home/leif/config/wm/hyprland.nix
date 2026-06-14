@@ -31,6 +31,11 @@
   wayland.windowManager.hyprland = {
     configType = "hyprlang";
     enable = true;
+
+    extraConfig = ''
+      source = ~/.config/hypr/colors.conf
+    '';
+
     settings = {
       env = [
         "XCURSOR_THEME,breeze_cursors"
