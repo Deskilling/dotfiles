@@ -1,5 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    lua-language-server
+  ];
+
   programs.zed-editor = {
     enable = true;
     mutableUserSettings = false;
@@ -76,9 +80,6 @@
           format_on_save = "on";
         };
 
-        Lua = {
-          enable_language_server = false;
-        };
       };
 
       telemetry = {
