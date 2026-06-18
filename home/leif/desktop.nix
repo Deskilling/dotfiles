@@ -13,12 +13,12 @@
     ./config/cli/nix.nix
 
     # gui
-    ./config/gui/essential.nix
     ./config/gui/cider.nix
+    ./config/gui/essential.nix
+    ./config/gui/firefox.nix
     ./config/gui/games.nix
     ./config/gui/jetbrains.nix
     ./config/gui/kitty.nix
-    ./config/gui/librewolf.nix
     ./config/gui/obs.nix
     ./config/gui/pear.nix
     ./config/gui/prismlauncher.nix
@@ -49,5 +49,5 @@
   home.username = "leif";
   home.homeDirectory = "/home/leif";
 
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 }
