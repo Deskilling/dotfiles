@@ -75,6 +75,13 @@
         hour_format = "hour24";
       };
 
+      file_types = {
+        C = [
+          "c"
+          "h"
+        ];
+      };
+
       languages = {
         C = {
           format_on_save = "on";
