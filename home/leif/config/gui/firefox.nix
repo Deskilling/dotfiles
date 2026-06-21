@@ -22,6 +22,8 @@ in
         StartPage = "homepage";
       };
 
+      NewTabPage = false;
+
       ExtensionSettings = {
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
@@ -50,13 +52,14 @@ in
         (builtins.readFile "${betterfox}/Securefox.js")
         (builtins.readFile "${betterfox}/Fastfox.js")
         (builtins.readFile "${betterfox}/Peskyfox.js")
+        ''
+          user_pref("browser.cache.disk.enable", true);
+        ''
       ];
 
       settings = {
         "privacy.clearOnShutdown.history" = false;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-
-        "browser.cache.disk.enable" = true;
       };
     };
   };
