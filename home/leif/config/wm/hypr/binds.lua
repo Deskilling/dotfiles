@@ -2,6 +2,8 @@ local mod = "CTRL + ALT + SUPER"
 
 hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd("noctalia msg panel-open launcher"))
 
+hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd("kitty"))
+
 hl.bind(mod .. " + E", hl.dsp.layout("move +col"))
 hl.bind(mod .. " + Q", hl.dsp.layout("move -col"))
 hl.bind(mod .. " + Z", hl.dsp.layout("tiling"))
