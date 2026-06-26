@@ -1,0 +1,44 @@
+[config]
+
+[templates.scripts]
+input_path = "~/.config/matugen/templates/hello.txt"
+post_hook = "find ~/.config/matugen/scripts/*.sh -type f -exec {} \\;"
+
+# https://github.com/noctalia-dev/noctalia/blob/main/assets/templates/kitty/kitty.conf
+# modified
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty.conf"
+output_path = "~/.config/kitty/colors.conf"
+post_hook = "pkill -USR1 kitty >/dev/null 2>&1 || true"
+
+# https://github.com/noctalia-dev/noctalia/blob/main/assets/templates/hyprland/hyprland.lua
+[templates.hypr]
+input_path = "~/.config/matugen/templates/hyprland.lua"
+output_path = "~/.config/hypr/matugen.lua"
+post_hook = "hyprctl reload"
+
+# https://github.com/InioX/matugen-themes/blob/main/templates/midnight-discord.css
+[templates.vesktop]
+input_path = "~/.config/matugen/templates/vesktop.css"
+output_path = "~/.config/vesktop/themes/matugen-midnight.css"
+
+# https://github.com/InioX/matugen-themes/blob/main/templates/zed-colors.json
+[templates.zed]
+input_path = "~/.config/matugen/templates/zed.json"
+output_path = "~/.config/zed/themes/matugen.json"
+
+# https://github.com/Abhra00/Matuprland/blob/main/matugen/templates/matugen-gtk.css
+[templates.gkt3]
+input_path = "~/.config/matugen/templates/gtk3.css"
+output_path = "~/.config/gtk-3.0/matugen.css"
+
+# https://github.com/Abhra00/Matuprland/blob/main/matugen/templates/matugen-gtk.css
+[templates.gkt4]
+input_path = "~/.config/matugen/templates/gtk4.css"
+output_path = "~/.config/gtk-4.0/matugen.css"
+
+# default template and modified with the help of an llm still needs some tweaks
+[templates.noctalia]
+input_path = "~/.config/matugen/templates/noctalia.json"
+output_path = "~/.config/noctalia/palettes/matugen.json"
+post_hook = "noctalia msg config-reload"

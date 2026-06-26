@@ -9,6 +9,7 @@
   config = lib.mkIf config.profiles.hyprland.enable {
     programs.hyprland = {
       enable = true;
+      withUWSM = true;
       xwayland.enable = true;
     };
   };
