@@ -1,0 +1,94 @@
+{
+  "dark": {
+    "mPrimary": "{{colors.primary.default.hex}}",
+    "mOnPrimary": "{{colors.on_primary.default.hex}}",
+    "mSecondary": "{{colors.secondary.default.hex}}",
+    "mOnSecondary": "{{colors.on_secondary.default.hex}}",
+    "mTertiary": "{{colors.tertiary.default.hex}}",
+    "mOnTertiary": "{{colors.on_tertiary.default.hex}}",
+    "mError": "{{colors.error.default.hex}}",
+    "mOnError": "{{colors.on_error.default.hex}}",
+    "mSurface": "{{colors.surface.default.hex}}",
+    "mOnSurface": "{{colors.on_surface.default.hex}}",
+    "mSurfaceVariant": "{{colors.surface_variant.default.hex}}",
+    "mOnSurfaceVariant": "{{colors.on_surface_variant.default.hex}}",
+    "mOutline": "{{colors.outline.default.hex}}",
+    "mShadow": "{{colors.shadow.default.hex}}",
+    "mHover": "{{colors.tertiary.default.hex}}",
+    "mOnHover": "{{colors.on_tertiary.default.hex}}",
+    "terminal": {
+      "normal": {
+        "black": "{{colors.surface_variant.default.hex}}",
+        "red": "{{colors.error.default.hex}}",
+        "green": "{{colors.primary.default.hex}}",
+        "yellow": "{{colors.secondary.default.hex}}",
+        "blue": "{{colors.tertiary.default.hex}}",
+        "magenta": "{{colors.primary_fixed_dim.default.hex}}",
+        "cyan": "{{colors.secondary_fixed_dim.default.hex}}",
+        "white": "{{colors.on_surface.default.hex}}"
+      },
+      "bright": {
+        "black": "{{colors.outline.default.hex}}",
+        "red": "{{colors.error.default.hex}}",
+        "green": "{{colors.primary.default.hex}}",
+        "yellow": "{{colors.secondary.default.hex}}",
+        "blue": "{{colors.tertiary.default.hex}}",
+        "magenta": "{{colors.primary_fixed_dim.default.hex}}",
+        "cyan": "{{colors.secondary_fixed_dim.default.hex}}",
+        "white": "{{colors.on_surface.default.hex}}"
+      },
+      "foreground": "{{colors.on_surface.default.hex}}",
+      "background": "{{colors.background.default.hex}}",
+      "cursor": "{{colors.on_surface.default.hex}}",
+      "cursorText": "{{colors.background.default.hex}}",
+      "selectionFg": "{{colors.on_surface_variant.default.hex}}",
+      "selectionBg": "{{colors.surface_variant.default.hex}}"
+    }
+  },
+  "light": {
+    "mPrimary": "{{colors.primary.light.hex}}",
+    "mOnPrimary": "{{colors.on_primary.light.hex}}",
+    "mSecondary": "{{colors.secondary.light.hex}}",
+    "mOnSecondary": "{{colors.on_secondary.light.hex}}",
+    "mTertiary": "{{colors.tertiary.light.hex}}",
+    "mOnTertiary": "{{colors.on_tertiary.light.hex}}",
+    "mError": "{{colors.error.light.hex}}",
+    "mOnError": "{{colors.on_error.light.hex}}",
+    "mSurface": "{{colors.surface.light.hex}}",
+    "mOnSurface": "{{colors.on_surface.light.hex}}",
+    "mSurfaceVariant": "{{colors.surface_variant.light.hex}}",
+    "mOnSurfaceVariant": "{{colors.on_surface_variant.light.hex}}",
+    "mOutline": "{{colors.outline.light.hex}}",
+    "mShadow": "{{colors.shadow.light.hex}}",
+    "mHover": "{{colors.tertiary.light.hex}}",
+    "mOnHover": "{{colors.on_tertiary.light.hex}}",
+    "terminal": {
+      "normal": {
+        "black": "{{colors.surface_variant.light.hex}}",
+        "red": "{{colors.error.light.hex}}",
+        "green": "{{colors.primary.light.hex}}",
+        "yellow": "{{colors.secondary.light.hex}}",
+        "blue": "{{colors.tertiary.light.hex}}",
+        "magenta": "{{colors.primary_fixed_dim.light.hex}}",
+        "cyan": "{{colors.secondary_fixed_dim.light.hex}}",
+        "white": "{{colors.on_surface.light.hex}}"
+      },
+      "bright": {
+        "black": "{{colors.outline.light.hex}}",
+        "red": "{{colors.error.light.hex}}",
+        "green": "{{colors.primary.light.hex}}",
+        "yellow": "{{colors.secondary.light.hex}}",
+        "blue": "{{colors.tertiary.light.hex}}",
+        "magenta": "{{colors.primary_fixed_dim.light.hex}}",
+        "cyan": "{{colors.secondary_fixed_dim.light.hex}}",
+        "white": "{{colors.on_surface.light.hex}}"
+      },
+      "foreground": "{{colors.on_surface.light.hex}}",
+      "background": "{{colors.background.light.hex}}",
+      "cursor": "{{colors.on_surface.light.hex}}",
+      "cursorText": "{{colors.background.light.hex}}",
+      "selectionFg": "{{colors.on_surface_variant.light.hex}}",
+      "selectionBg": "{{colors.surface_variant.light.hex}}"
+    }
+  }
+}

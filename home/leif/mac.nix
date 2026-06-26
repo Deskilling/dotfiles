@@ -22,7 +22,7 @@
     ./config/shell/starship.nix
     ./config/shell/zoxide.nix
     ./config/shell/zsh.nix
-];
+  ];
 
   programs.nh.flake = lib.mkForce "/Users/leifhaberecht/Documents/Github/dotfiles";
 
@@ -35,5 +35,5 @@
 
   home.username = "leifhaberecht";
   home.homeDirectory = "/Users/leifhaberecht";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 }
