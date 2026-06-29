@@ -17,6 +17,7 @@
     ./config/gui/essential.nix
     ./config/gui/firefox.nix
     ./config/gui/games.nix
+    ./config/gui/jan.nix
     ./config/gui/jetbrains.nix
     ./config/gui/kitty.nix
     ./config/gui/obs.nix
