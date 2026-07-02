@@ -15,6 +15,11 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    awallpicker = {
+      url = "github:Deskilling/awallpicker";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -23,6 +28,7 @@
       nixpkgs,
       home-manager,
       noctalia,
+      awallpicker,
       ...
     }:
     {
@@ -37,6 +43,10 @@
               home-manager.sharedModules = [
                 noctalia.homeModules.default
               ];
+
+              home-manager.extraSpecialArgs = {
+                inherit awallpicker;
+              };
             }
           ];
         };

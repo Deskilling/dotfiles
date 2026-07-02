@@ -13,6 +13,7 @@
     ./config/cli/nix.nix
 
     # gui
+    ./config/gui/awallpicker.nix
     ./config/gui/cider.nix
     ./config/gui/essential.nix
     ./config/gui/firefox.nix
