@@ -7,6 +7,7 @@
   imports = [
     # cli
     ./config/cli/btop.nix
+    ./config/cli/cde.nix
     ./config/cli/fastfetch.nix
     ./config/cli/git.nix
     ./config/cli/lazygit.nix
