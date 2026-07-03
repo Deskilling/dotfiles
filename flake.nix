@@ -20,6 +20,11 @@
       url = "github:Deskilling/awallpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    cde = {
+      url = "github:Deskilling/cde";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -29,6 +34,7 @@
       home-manager,
       noctalia,
       awallpicker,
+      cde,
       ...
     }:
     {
@@ -55,8 +61,10 @@
       homeConfigurations = {
         "leif@mac" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."aarch64-darwin";
-          extraSpecialArgs = { inherit self; };
-          modules = [ ./hosts/mac/default.nix ];
+          extraSpecialArgs = { inherit self cde; };
+          modules = [
+            ./hosts/mac/default.nix
+          ];
         };
       };
     };
