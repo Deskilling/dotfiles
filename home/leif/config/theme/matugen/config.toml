@@ -42,3 +42,12 @@ output_path = "~/.config/gtk-4.0/matugen.css"
 input_path = "~/.config/matugen/templates/noctalia.json"
 output_path = "~/.config/noctalia/palettes/matugen.json"
 post_hook = "noctalia msg config-reload"
+
+[templates.kvantum]
+input_path = "~/.config/matugen/templates/kvantum-colors.kvconfig"
+output_path = "~/.config/Kvantum/matugen/matugen.kvconfig"
+post_hook = "kvantummanager --set matugen && pkill -USR1 kvantum >/dev/null 2>&1 || true"
+
+[templates.kvantum-svg]
+input_path = "~/.config/matugen/templates/kvantum-colors.svg"
+output_path = "~/.config/Kvantum/matugen/matugen.svg"

@@ -1,24 +1,11 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ qt6Packages.qt6ct ];
+  home.packages = with pkgs; [
+    qt6Packages.qtstyleplugin-kvantum
+    kdePackages.qtstyleplugin-kvantum
+  ];
 
   qt = {
     enable = true;
   };
-
-  xdg.configFile."qt5ct/qt5ct.conf".text = ''
-    [Appearance]
-    color_scheme_path=~/.config/qt5ct/colors/maguten.conf
-    custom_palette=true
-    standard_dialogs=default
-    style=Fusion
-  '';
-
-  xdg.configFile."qt6ct/qt6ct.conf".text = ''
-    [Appearance]
-    color_scheme_path=~/.config/qt5ct/colors/matugen.conf
-    custom_palette=true
-    standard_dialogs=default
-    style=Fusion
-  '';
 }
