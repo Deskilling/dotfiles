@@ -18,6 +18,7 @@
       "lua"
       "log"
       "go_snippets"
+      "xmake"
 
       "cattpuccin"
     ];
