@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  config,
+  pkgs,
+  ...
+}:
 {
   home.packages = with pkgs; [
     lua-language-server
@@ -24,8 +28,7 @@
     ];
 
     userSettings = {
-      # I will add Noctalia back once the template is available again in v5
-      theme = "Catppuccin Mocha";
+      theme = if config.matugen.enable then "matugen-dark" else "catppuccin-mocha";
       icon_theme = "Catppuccin Mocha";
 
       active_pane_modifiers = {
@@ -65,11 +68,6 @@
         inline = {
           enabled = true;
         };
-      };
-
-      indent_guides = {
-        enabled = true;
-        coloring = "indent_aware";
       };
 
       journal = {
