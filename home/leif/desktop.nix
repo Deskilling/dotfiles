@@ -4,6 +4,33 @@
   ...
 }:
 {
+  options.matugen = lib.mkOption {
+    type = lib.types.submodule {
+      options = {
+        enable = lib.mkOption {
+          type = lib.types.bool;
+          default = true;
+        };
+        package = lib.mkOption {
+          type = lib.types.package;
+          default = pkgs.matugen;
+        };
+      };
+    };
+  };
+
+  config = {
+    home.username = "leif";
+    home.homeDirectory = "/home/leif";
+
+    home.stateVersion = "26.05";
+
+    matugen = {
+      enable = true;
+      package = pkgs.matugen;
+    };
+  };
+
   imports = [
     # cli
     ./config/cli/btop.nix
@@ -45,11 +72,5 @@
     # wm
     ./config/wm/hyprland.nix
     ./config/wm/noctalia.nix
-
   ];
-
-  home.username = "leif";
-  home.homeDirectory = "/home/leif";
-
-  home.stateVersion = "26.05";
 }
