@@ -28,7 +28,7 @@
     ];
 
     userSettings = {
-      theme = if config.matugen.enable then "matugen-dark" else "catppuccin-mocha";
+      theme = if config.matugen.enable then "Matugen Dark" else "Catppuccin Mocha";
       icon_theme = "Catppuccin Mocha";
 
       active_pane_modifiers = {
