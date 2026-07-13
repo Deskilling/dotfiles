@@ -3,6 +3,21 @@
   ...
 }:
 {
+  options.matugen = lib.mkOption {
+    type = lib.types.submodule {
+      options = {
+        enable = lib.mkOption {
+          type = lib.types.bool;
+          default = true;
+        };
+        package = lib.mkOption {
+          type = lib.types.package;
+          default = null;
+        };
+      };
+    };
+  };
+
   config = {
     home.username = "leifhaberecht";
     home.homeDirectory = "/Users/leifhaberecht";
@@ -15,6 +30,11 @@
       update = "nh home switch --update --configuration leif@mac";
       generations = "home-manager generations";
       gcl = "nh clean all";
+    };
+
+    matugen = {
+      enable = false;
+      package = null;
     };
   };
 
