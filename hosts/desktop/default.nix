@@ -27,6 +27,10 @@
     "flakes"
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-40.10.5"
+  ];
+
   nix.settings = {
     max-jobs = "auto";
     cores = 0;
