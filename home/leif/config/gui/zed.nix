@@ -3,13 +3,6 @@
   pkgs,
   ...
 }:
-let
-  nixpkgs = import (fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/ae643c27532f5087fb0535dfe981fd4372291a4e.tar.gz";
-    sha256 = "1sklw16xqrk0ijwvcaizq7b8cakhvaq9drq2p6045h5626pnn1z5";
-  }) { system = "aarch64-darwin"; };
-  zed = nixpkgs.zed-editor;
-in
 {
   home.packages = with pkgs; [
     lua-language-server
@@ -17,7 +10,6 @@ in
 
   programs.zed-editor = {
     enable = true;
-    package = zed;
     mutableUserSettings = false;
     mutableUserKeymaps = false;
 
