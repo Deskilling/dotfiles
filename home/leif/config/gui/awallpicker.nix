@@ -1,6 +1,6 @@
-{ awallpicker, pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   home.packages = [
-    awallpicker.packages.${pkgs.system}.default
+    inputs.awallpicker.packages.${pkgs.system}.default
   ];
 }

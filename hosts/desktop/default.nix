@@ -5,13 +5,12 @@
   ...
 }:
 {
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 
   imports = [
     ./hardware-configuration.nix
 
     ../../modules/profiles/hyprland.nix
-    ../../modules/profiles/plasma.nix
 
     ./modules/boot.nix
     ./modules/hardware.nix
@@ -34,6 +33,7 @@
   nix.settings = {
     max-jobs = "auto";
     cores = 0;
+    auto-optimise-store = true;
 
     trusted-substituters = [
       "https://hyprland.cachix.org"
@@ -53,16 +53,9 @@
     Defaults pwfeedback
   '';
 
-  home-manager.users.leif = import ../../home/leif/desktop.nix;
-  home-manager.useGlobalPkgs = true;
-  home-manager.extraSpecialArgs = {
-    inherit self;
-  };
-
   environment.etc."librewolf/policies/policies.json" = {
     source = "/etc/firefox/policies/policies.json";
   };
 
-  profiles.plasma.enable = false;
   profiles.hyprland.enable = true;
 }

@@ -1,5 +1,7 @@
-{ self, ... }:
+{ self, inputs, ... }:
 {
+  imports = [ inputs.noctalia.homeModules.default ];
+
   home.file.".config/noctalia/scripts" = {
     source = "${self}/home/leif/config/wm/noctalia/scripts";
     executable = true;

@@ -1,5 +1,6 @@
 {
   lib,
+  self,
   pkgs,
   ...
 }:
@@ -25,6 +26,17 @@
 
     home.stateVersion = "26.05";
 
+    nixpkgs.config.allowUnfree = true;
+
+    programs.nh.flake = lib.mkForce (toString self);
+
+    programs.zsh.shellAliases = lib.mkForce {
+      rebuild = "nh os switch \"$NH_FLAKE\"#nixos";
+      update = "nh os switch --update \"$NH_FLAKE\"#nixos";
+      generations = "nix profile history";
+      gcl = "nh clean all --keep-last 5";
+    };
+
     matugen = {
       enable = true;
       package = pkgs.matugen;
@@ -34,6 +46,7 @@
   imports = [
     # cli
     ./config/cli/btop.nix
+    ./config/cli/cde.nix
     ./config/cli/fastfetch.nix
     ./config/cli/git.nix
     ./config/cli/lazygit.nix
@@ -71,6 +84,7 @@
 
     # wm
     ./config/wm/hyprland.nix
+    ./config/wm/mango.nix
     ./config/wm/noctalia.nix
   ];
 }

@@ -1,6 +1,6 @@
-{ cde, pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   home.packages = [
-    cde.packages.${pkgs.system}.default
+    inputs.cde.packages.${pkgs.system}.default
   ];
 }

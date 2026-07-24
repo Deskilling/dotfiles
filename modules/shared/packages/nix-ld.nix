@@ -1,8 +1,10 @@
 { pkgs, ... }:
 {
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    hidapi
-    libusb1
-  ];
+  programs.nix-ld = {
+    enable = true;
+    libraries = [
+      pkgs.hidapi
+      pkgs.libusb1
+    ];
+  };
 }
