@@ -2,6 +2,10 @@
   description = "Saftig Knaftig";
 
   inputs = {
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+    };
+
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
@@ -25,10 +29,16 @@
       url = "github:Deskilling/cde";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mangowm = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    {
+    inputs@{
+      flake-parts,
       self,
       nixpkgs,
       home-manager,
@@ -37,35 +47,15 @@
       cde,
       ...
     }:
-    {
-      nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit self; };
-          modules = [
-            ./hosts/desktop/default.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.sharedModules = [
-                noctalia.homeModules.default
-              ];
 
-              home-manager.extraSpecialArgs = {
-                inherit awallpicker;
-              };
-            }
-          ];
-        };
+    let
+      flakeParts = flake-parts.lib.mkFlake { inherit inputs; } {
+        imports = [
+          ./flake-modules/systems.nix
+          ./flake-modules/nixos.nix
+          ./flake-modules/home.nix
+        ];
       };
-
-      homeConfigurations = {
-        "leif@mac" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages."aarch64-darwin";
-          extraSpecialArgs = { inherit self cde; };
-          modules = [
-            ./hosts/mac/default.nix
-          ];
-        };
-      };
-    };
+    in
+    flakeParts;
 }

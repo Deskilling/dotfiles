@@ -1,5 +1,6 @@
 {
   lib,
+  self,
   ...
 }:
 {
@@ -23,13 +24,17 @@
     home.homeDirectory = "/Users/leifhaberecht";
     home.stateVersion = "26.05";
 
-    programs.nh.flake = lib.mkForce "/Users/leifhaberecht/Documents/Github/dotfiles";
+    nixpkgs.config.allowUnfree = true;
+
+    programs.nh.flake = lib.mkForce (toString self);
 
     programs.zsh.shellAliases = lib.mkForce {
       rebuild = "nh home switch --configuration leif@mac";
       update = "nh home switch --update --configuration leif@mac";
-      generations = "home-manager generations";
-      gcl = "nh clean all";
+      hswitch = "nh home switch --configuration leif@mac";
+      hupdate = "nh home switch --update --configuration leif@mac";
+      generations = "nix profile history";
+      gcl = "nh clean all --keep-last 5";
     };
 
     matugen = {
