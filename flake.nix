@@ -29,22 +29,11 @@
       url = "github:Deskilling/cde";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    mangowm = {
-      url = "github:mangowm/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
     inputs@{
       flake-parts,
-      self,
-      nixpkgs,
-      home-manager,
-      noctalia,
-      awallpicker,
-      cde,
       ...
     }:
 
