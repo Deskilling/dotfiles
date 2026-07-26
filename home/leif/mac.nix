@@ -31,8 +31,6 @@
     programs.zsh.shellAliases = lib.mkForce {
       rebuild = "nh home switch --configuration leif@mac";
       update = "nh home switch --update --configuration leif@mac";
-      hswitch = "nh home switch --configuration leif@mac";
-      hupdate = "nh home switch --update --configuration leif@mac";
       generations = "nix profile history";
       gcl = "nh clean all --keep-last 5";
     };
