@@ -64,6 +64,7 @@
     ./config/gui/obs.nix
     ./config/gui/pear.nix
     ./config/gui/prismlauncher.nix
+    ./config/gui/vicinae.nix
     ./config/gui/vesktop.nix
     ./config/gui/vscodium.nix
     ./config/gui/zed.nix
