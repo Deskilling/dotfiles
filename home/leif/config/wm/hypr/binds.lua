@@ -1,6 +1,6 @@
 local mod = "CTRL + ALT + SUPER"
 
-hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd("noctalia msg panel-open launcher"))
+hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd("vicinae toggle"))
 
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd("kitty"))
 
