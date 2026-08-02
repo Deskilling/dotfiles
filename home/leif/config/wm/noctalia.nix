@@ -12,24 +12,8 @@
     enable = true;
 
     settings = {
-      theme = {
-        custom_palette = "matugen";
-        mode = "dark";
-        source = "custom";
-
-        templates = {
-          enable_builtin_templates = false;
-          enable_community_templates = false;
-        };
-      };
-
-      hooks = {
-        wallpaper_changed = "~/.config/noctalia/scripts/wallpaper.sh";
-      };
-
       bar = {
         default = {
-          ends_margin = 130;
           background_opacity = 0.8;
           center = [ "workspaces" ];
           end = [
@@ -42,28 +26,44 @@
             "clock"
             "session"
           ];
-
           start = [
             "media"
             "audio_visualizer"
           ];
-
           widget_spacing = 10;
         };
-
         order = [ "default" ];
       };
 
       control_center = {
+        shortcuts = [
+          { type = "wifi"; }
+          { type = "bluetooth"; }
+          { type = "nightlight"; }
+          { type = "power_profile"; }
+        ];
         sidebar = "full";
+      };
+
+      hooks = {
+        wallpaper_changed = "~/.config/noctalia/scripts/wallpaper.sh";
       };
 
       shell = {
         panel = {
           control_center_placement = "floating";
         };
-
         settings_show_advanced = true;
+      };
+
+      theme = {
+        custom_palette = "matugen";
+        mode = "dark";
+        source = "custom";
+        templates = {
+          enable_builtin_templates = false;
+          enable_community_templates = false;
+        };
       };
 
       wallpaper = {
