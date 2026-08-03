@@ -51,3 +51,8 @@ post_hook = "kvantummanager --set matugen && pkill -USR1 kvantum >/dev/null 2>&1
 [templates.kvantum-svg]
 input_path = "~/.config/matugen/templates/kvantum-colors.svg"
 output_path = "~/.config/Kvantum/matugen/matugen.svg"
+
+# https://github.com/InioX/matugen-themes/blob/main/templates/prismlauncher.json
+[templates.prismlauncher]
+input_path = "~/.config/matugen/templates/prismlauncher.json"
+output_path = "~/.local/share/PrismLauncher/themes/Matugen/theme.json"

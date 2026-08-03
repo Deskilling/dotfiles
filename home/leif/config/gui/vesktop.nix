@@ -18,7 +18,7 @@
     };
 
     vencord.settings = {
-      enabledThemes = [ "noctalia.theme.css" ];
+      enabledThemes = [ "matugen.theme.css" ];
 
       plugins = {
         CustomIdle = {
