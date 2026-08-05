@@ -18,7 +18,7 @@
     };
 
     vencord.settings = {
-      enabledThemes = [ "matugen.theme.css" ];
+      enabledThemes = [ "discord-midnight.css" ];
 
       plugins = {
         CustomIdle = {
