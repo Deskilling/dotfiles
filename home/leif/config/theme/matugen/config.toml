@@ -56,3 +56,9 @@ output_path = "~/.config/Kvantum/matugen/matugen.svg"
 [templates.prismlauncher]
 input_path = "~/.config/matugen/templates/prismlauncher.json"
 output_path = "~/.local/share/PrismLauncher/themes/Matugen/theme.json"
+
+# https://github.com/noctalia-dev/community-templates/blob/main/pywalfox/pywalfox.json
+[templates.pywalfox]
+input_path = "~/.config/matugen/templates/pywalfox.json"
+output_path = "~/.cache/wal/colors.json"
+post_hook = "pywalfox update"

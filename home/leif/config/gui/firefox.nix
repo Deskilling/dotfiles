@@ -8,6 +8,10 @@ let
   };
 in
 {
+  home.packages = with pkgs; [
+    pywalfox-native
+  ];
+
   programs.firefox = {
     enable = true;
     configPath = "${config.xdg.configHome}/mozilla/firefox";
@@ -39,6 +43,10 @@ in
         };
         "gdpr@cavi.au.dk" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/consent-o-matic/latest.xpi";
+          installation_mode = "force_installed";
+        };
+        "pywalfox@frewacom.org" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/pywalfox/latest.xpi";
           installation_mode = "force_installed";
         };
       };
