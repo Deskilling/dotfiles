@@ -26,7 +26,7 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    programs.nh.flake = lib.mkForce (toString self);
+    programs.nh.flake = lib.mkForce "~/Documents/Github/dotfiles";
 
     programs.zsh.shellAliases = lib.mkForce {
       rebuild = "nh home switch --configuration leif@mac";
@@ -52,6 +52,7 @@
 
     # gui
     ./config/gui/zed.nix
+    ./config/gui/vesktop.nix
 
     # shell
     ./config/shell/direnv.nix
