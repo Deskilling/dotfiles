@@ -26,7 +26,7 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    programs.nh.flake = lib.mkForce "~/Documents/Github/dotfiles";
+    programs.nh.flake = lib.mkForce "/Users/leifhaberecht/Documents/Github/dotfiles";
 
     programs.zsh.shellAliases = lib.mkForce {
       rebuild = "nh home switch --configuration leif@mac";
