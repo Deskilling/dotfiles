@@ -2,6 +2,10 @@
 {
   gtk = {
     enable = true;
+    font = {
+      name = "Inter";
+      package = pkgs.inter;
+    };
     iconTheme = {
       name = "Fluent";
       package = pkgs.fluent-icon-theme;
