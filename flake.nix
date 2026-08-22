@@ -2,10 +2,6 @@
   description = "Saftig Knaftig";
 
   inputs = {
-    flake-parts = {
-      url = "github:hercules-ci/flake-parts";
-    };
-
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
@@ -13,6 +9,10 @@
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
     };
 
     noctalia = {

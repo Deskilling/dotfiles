@@ -81,7 +81,6 @@
     ./config/theme/matugen.nix
     ./config/theme/gtk.nix
     ./config/theme/pointer.nix
-    ./config/theme/qt.nix
 
     # wm
     ./config/wm/hyprland.nix
