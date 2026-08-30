@@ -8,5 +8,5 @@
     ../../../modules/shared/boot/windows.nix
   ];
 
-  boot.windows.uuid = "2E87-A21C";
+  boot.windows.uuid = "D0B4-0B0C";
 }
