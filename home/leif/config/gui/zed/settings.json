@@ -1,0 +1,38 @@
+{
+  "outline_panel": {
+    "dock": "right"
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "disable_ai": true,
+  "project_panel": {
+    "git_status_indicator": true,
+    "dock": "right",
+  },
+  "title_bar": {
+    "show_sign_in": false
+  },
+  "format_on_save": "modifications",
+  "double_click_in_multibuffer": "open",
+  "base_keymap": "SublimeText",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "icon_theme": "Catppuccin Mocha",
+  "auto_install_extensions": {
+    "cattpuccin": true,
+    "git_firefly": true,
+    "go_snippets": true,
+    "html": true,
+    "log": true,
+    "lua": true,
+    "make": true,
+    "nix": true,
+    "toml": true,
+    "xmake": true
+  },
+  "theme": "Matugen Dark Transparent"
+}
