@@ -85,5 +85,6 @@
     # wm
     ./config/wm/hyprland.nix
     ./config/wm/noctalia.nix
+    ./config/wm/quickshell.nix
   ];
 }
