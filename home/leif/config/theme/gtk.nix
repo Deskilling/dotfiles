@@ -14,6 +14,8 @@
 
   home.packages = with pkgs; [
     adw-gtk3
+    adwaita-icon-theme
+    hicolor-icon-theme
   ];
 
   xdg.configFile."gtk-4.0/gtk.css".text = ''
