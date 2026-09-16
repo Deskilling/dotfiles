@@ -27,13 +27,51 @@
         self.nixosModules.nix-ld
         self.nixosModules.users
 
+        self.nixosModules.essential
+        self.nixosModules.hyprland
+        self.nixosModules.steam
+
         {
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+          };
+
           home-manager.users.leif = {
             imports = [
               self.homeManagerModules.leif
               ../home/leif/desktop.nix
 
+              self.homeManagerModules.btop
+              self.homeManagerModules.cde
+              self.homeManagerModules.fastfetch
+              self.homeManagerModules.git
+              self.homeManagerModules.lazygit
+              self.homeManagerModules.nix
+
+              self.homeManagerModules.awallpicker
+              self.homeManagerModules.cider
+              self.homeManagerModules.essential
+              self.homeManagerModules.firefox
+              self.homeManagerModules.games
+              self.homeManagerModules.jetbrains
+              self.homeManagerModules.kitty
+              self.homeManagerModules.obs
+              self.homeManagerModules.pear
+              self.homeManagerModules.prismlauncher
+              self.homeManagerModules.vesktop
+              self.homeManagerModules.vicinae
+              self.homeManagerModules.vscodium
               self.homeManagerModules.zed
+
+              self.homeManagerModules.gtk
+              self.homeManagerModules.matugen
+              self.homeManagerModules.pointer
+
+              self.homeManagerModules.hyprland
+              self.homeManagerModules.noctalia
+              self.homeManagerModules.quickshell
+
+              self.homeManagerModules.shell
             ];
           };
         }
