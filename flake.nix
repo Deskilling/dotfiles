@@ -32,19 +32,12 @@
   };
 
   outputs =
-    inputs@{
-      flake-parts,
-      ...
-    }:
-
-    let
-      flakeParts = flake-parts.lib.mkFlake { inherit inputs; } {
-        imports = [
-          ./flake-modules/systems.nix
-          ./flake-modules/nixos.nix
-          ./flake-modules/home.nix
-        ];
-      };
-    in
-    flakeParts;
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        ./flake-modules/host.nix
+        ./flake-modules/home.nix
+        ./flake-modules/modules.nix
+      ];
+    };
 }
