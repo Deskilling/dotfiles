@@ -4,7 +4,7 @@ let
 in
 {
 
-  home.file."./.config/fastfetch/imgs/${fastfetchImage}".source = "${self}/imgs/${fastfetchImage}";
+  home.file."./.config/fastfetch/imgs/${fastfetchImage}".source = ../../../../../imgs/${fastfetchImage};
 
   programs.fastfetch = {
     enable = true;

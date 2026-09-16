@@ -1,4 +1,4 @@
-{ self, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
     wl-clipboard
@@ -31,13 +31,8 @@
   };
 
   home.file.".config/hypr" = {
-    source = "${self}/home/leif/config/wm/hyprland/config";
+    source = ./config;
     recursive = true;
     force = true;
-  };
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-    configType = "lua";
   };
 }

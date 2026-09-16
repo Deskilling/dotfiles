@@ -1,14 +1,15 @@
 {
-  self,
+  pkgs,
   ...
 }:
 {
-  config.enabled.Matugen = true;
+  home.packages = with pkgs;[
+    matugen
+  ];
 
   home.file.".config/matugen" = {
-    source = "${self}/home/leif/config/theme/matugen";
+    source = ./config;
     executable = true;
     force = true;
   };
-
 }

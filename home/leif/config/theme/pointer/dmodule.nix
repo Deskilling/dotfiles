@@ -1,3 +1,3 @@
 {
-  flake.homeManagerModules.matugen = ./default.nix;
+  flake.homeManagerModules.pointer = ./default.nix;
 }
