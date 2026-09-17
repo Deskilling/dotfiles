@@ -6,6 +6,7 @@
 
   programs.zed-editor = {
     enable = true;
+    package = if stdenv.hostPlatform.isLinux then pkgs.zed-editor else null;
 
     extensions = [
       "nix"
