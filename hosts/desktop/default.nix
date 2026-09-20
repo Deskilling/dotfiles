@@ -45,4 +45,6 @@
   environment.etc."librewolf/policies/policies.json" = {
     source = "/etc/firefox/policies/policies.json";
   };
+
+  boot.windows.uuid = "D0B4-0B0C";
 }

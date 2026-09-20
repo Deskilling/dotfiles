@@ -1,6 +1,6 @@
 { lib, config, ... }:
 {
-  # lsblk -> uuid für windows boot entry
+  # lsblk -f -> uuid für windows boot entry
   options.boot.windows.uuid = lib.mkOption {
     type = lib.types.str;
     default = "";
