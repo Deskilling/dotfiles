@@ -17,7 +17,7 @@
       (extension "*" "" "menupanel")
       (extension "sponsorblock" "sponsorBlocker@ajay.app" "menupanel")
       (extension "ublock-origin" "uBlock0@raymondhill.net" "navbar")
-      (extension "bitwarden-password-manager" "{446900e4-71c2-419f-a6a7-df9c091e268b}" "menupanel")
+      (extension "bitwarden-password-manager" "{446900e4-71c2-419f-a6a7-df9c091e268b}" "navbar")
       (extension "pywalfox" "pywalfox@frewacom.org" "menupanel")
       (extension "consent-o-matic" "gdpr@cavi.au.dk" "menupanel")
     ];
