@@ -1,5 +1,10 @@
 [config]
 
+# most of the templates are either from
+# https://github.com/noctalia-dev/community-templates
+# or
+# https://github.com/InioX/matugen-themes/
+
 [templates.scripts]
 input_path = "~/.config/matugen/templates/hello.txt"
 post_hook = "find ~/.config/matugen/scripts/*.sh -type f -exec {} \\;"
@@ -21,6 +26,11 @@ post_hook = "hyprctl reload"
 [templates.vesktop]
 input_path = "~/.config/matugen/templates/vesktop.css"
 output_path = "~/.config/vesktop/themes/discord-midnight.css"
+
+# https://github.com/noctalia-dev/community-templates/blob/main/discord/discord-midnight.css
+[templates.discord]
+input_path = "~/.config/matugen/templates/vesktop.css"
+output_path = "~/.config/Vencord/themes/discord-midnight.css"
 
 # https://github.com/InioX/matugen-themes/blob/main/templates/zed-colors.json
 [templates.zed]

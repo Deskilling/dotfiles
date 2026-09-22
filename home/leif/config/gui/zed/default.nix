@@ -70,10 +70,7 @@
         xmake = true;
       };
 
-      theme =
-        if config.isEnabled.Matugen
-        then "Matugen Dark Transparent"
-        else "Catppuccin Mocha";
+      theme = if config.isEnabled.Matugen then "Noctalia Dark Transparent" else "Catppuccin Mocha";
     };
   };
 }
