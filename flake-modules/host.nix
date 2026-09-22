@@ -46,6 +46,7 @@
             ../home/leif/desktop.nix
           ]
 
+          # cli
           ++ (with self.homeManagerModules; [
             btop
             cde
@@ -53,9 +54,13 @@
             git
             lazygit
             nix
+          ])
 
+          # gui
+          ++ (with self.homeManagerModules; [
             awallpicker
             cider
+            discord
             essential
             firefox
             games
@@ -68,17 +73,29 @@
             vicinae
             vscodium
             zed
+          ])
 
+          # theme
+          ++ (with self.homeManagerModules; [
             gtk
             matugen
             pointer
+          ])
 
+          # wm
+          ++ (with self.homeManagerModules; [
             hyprland
             noctalia
             quickshell
+          ])
 
+          # shell
+          ++ (with self.homeManagerModules; [
             shell
           ]);
+
+          # specific info, that differs from default in values.nix
+          isEnabled.Matugen = true;
         };
       }
     ];
