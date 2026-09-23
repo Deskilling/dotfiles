@@ -115,7 +115,6 @@
 
     ++ (with self.homeManagerModules; [
       nix
-      brew
       shell
       zed
     ]);

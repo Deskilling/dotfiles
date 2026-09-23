@@ -1,4 +1,11 @@
+{ lib, pkgs, ... }:
 {
+  home.file.".Brewfile".text = lib.mkAfter (
+    lib.optionalString pkgs.stdenv.hostPlatform.isDarwin ''
+      brew "starship"
+    ''
+  );
+
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
