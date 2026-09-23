@@ -1,8 +1,19 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   home.packages = with pkgs; [
     lua-language-server
   ];
+
+  home.file.".Brewfile".text = lib.mkAfter (
+    lib.optionalString pkgs.stdenv.hostPlatform.isDarwin ''
+      cask "zed"
+    ''
+  );
 
   programs.zed-editor = {
     enable = true;
