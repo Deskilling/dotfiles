@@ -114,8 +114,12 @@
     ]
 
     ++ (with self.homeManagerModules; [
+      git
+      lazygit
       nix
+
       shell
+
       zed
     ]);
   };

@@ -8,6 +8,15 @@
 
   programs.starship = {
     enable = true;
+    package =
+      if pkgs.stdenv.hostPlatform.isDarwin then
+        pkgs.runCommand "starship-brew" { meta.mainProgram = "starship"; } ''
+          mkdir -p $out/bin
+          ln -s /opt/homebrew/bin/starship $out/bin/starship
+        ''
+      else
+        pkgs.starship;
+
     enableZshIntegration = true;
 
     settings = {
