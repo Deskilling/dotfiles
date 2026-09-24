@@ -17,7 +17,14 @@
 
   programs.zed-editor = {
     enable = true;
-    package = if pkgs.stdenv.hostPlatform.isLinux then pkgs.zed-editor else null;
+    package =
+      if pkgs.stdenv.hostPlatform.isDarwin then
+        pkgs.runCommand "zed-brew" { meta.mainProgram = "zed"; } ''
+          mkdir -p $out/bin
+          ln -s /opt/homebrew/bin/zed $out/bin/zed
+        ''
+      else
+        pkgs.zed;
 
     extensions = [
       "nix"
