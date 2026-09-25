@@ -50,6 +50,8 @@
 
       export PATH="$PATH:/home/leif/Documents/Git/cde/bin"
       eval "$(cde-bin init zsh)"
+
+      alias lg=lazygit
     '';
 
     shellAliases = {
