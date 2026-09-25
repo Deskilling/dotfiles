@@ -118,6 +118,8 @@
       lazygit
       nix
 
+      godot
+
       shell
 
       zed
