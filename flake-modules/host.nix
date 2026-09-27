@@ -117,6 +117,7 @@
       git
       lazygit
       nix
+      fastfetch
 
       godot
 
