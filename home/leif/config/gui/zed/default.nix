@@ -24,7 +24,7 @@
           ln -s /opt/homebrew/bin/zed $out/bin/zed
         ''
       else
-        pkgs.zed;
+        pkgs.zed-editor;
 
     extensions = [
       "nix"
