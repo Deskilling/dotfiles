@@ -4,6 +4,8 @@
 # https://github.com/noctalia-dev/community-templates
 # or
 # https://github.com/InioX/matugen-themes/
+# or
+# https://github.com/AvengeMedia/DankMaterialShell/tree/master/quickshell/matugen/templates
 
 [templates.scripts]
 input_path = "~/.config/matugen/templates/hello.txt"
@@ -58,7 +60,7 @@ post_hook = "noctalia msg config-reload"
 input_path = "~/.config/matugen/templates/prismlauncher.json"
 output_path = "~/.local/share/PrismLauncher/themes/Matugen/theme.json"
 
-# https://github.com/noctalia-dev/community-templates/blob/main/pywalfox/pywalfox.json
+# https://github.com/AvengeMedia/DankMaterialShell/blob/master/quickshell/matugen/templates/pywalfox-colors.json
 [templates.pywalfox]
 input_path = "~/.config/matugen/templates/pywalfox.json"
 output_path = "~/.cache/wal/colors.json"
