@@ -8,5 +8,9 @@
     unrar
     unzip
     btop
+
+    micro
   ];
+
+  environment.variables.EDITOR = "micro";
 }
