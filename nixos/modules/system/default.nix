@@ -8,6 +8,7 @@
     ./fonts
     ./hardware/firmware
     ./hardware/graphics
+    ./keyd
     ./locale
     ./network
     ./users
