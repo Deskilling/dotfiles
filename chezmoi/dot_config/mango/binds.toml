@@ -3,12 +3,12 @@
 "CTRL+ALT+SUPER+space" = "spawn,noctalia msg panel-toggle launcher"
 "CTRL+ALT+SUPER+Return" = "spawn,rio"
 
+"CTRL+ALT+SUPER+SHIFT+Escape" = "quit"
+
+# Focus
 "CTRL+ALT+SUPER+e" = "focusstack,next"
 "CTRL+ALT+SUPER+q" = "focusstack,prev"
-"CTRL+ALT+SUPER+z" = "setlayout,tile"
-"CTRL+ALT+SUPER+f" = "set_proportion,1.0"
-"CTRL+ALT+SUPER+d" = "set_proportion,0.5"
-
+"CTRL+ALT+SUPER+w" = "focuslast,"
 "CTRL+ALT+SUPER+Left" = "focusdir,left"
 "CTRL+ALT+SUPER+Down" = "focusdir,down"
 "CTRL+ALT+SUPER+Up" = "focusdir,up"
@@ -19,9 +19,22 @@
 "CTRL+ALT+SUPER+i" = "move_client,up"
 "CTRL+ALT+SUPER+l" = "move_client,right"
 
+"CTRL+ALT+SUPER+z" = "setlayout,tile"
+"CTRL+ALT+SUPER+a" = "setlayout,scroller"
+"CTRL+ALT+SUPER+c" = "switch_layout"
+"CTRL+ALT+SUPER+f" = "set_proportion,1.0"
+"CTRL+ALT+SUPER+d" = "set_proportion,0.5"
+"CTRL+ALT+SUPER+v" = "switch_proportion_preset,"
+
 "CTRL+ALT+SUPER+x" = "togglefloating,"
 "CTRL+ALT+SUPER+g" = "togglefullscreen,"
+"CTRL+ALT+SUPER+m" = "minimized,"
+"CTRL+ALT+SUPER+SHIFT+m" = "restore_minimized,"
+
 "ALT+F4" = "killclient,"
+"ALT+SHIFT+F4" = "killclient,force"
+
+"ALT+Tab" = "toggleoverview,"
 
 "CTRL+ALT+SUPER+1" = "view,1,0"
 "CTRL+ALT+SUPER+2" = "view,2,0"
@@ -30,6 +43,7 @@
 "CTRL+ALT+SUPER+5" = "view,5,0"
 "CTRL+ALT+SUPER+6" = "view,6,0"
 "CTRL+ALT+SUPER+7" = "view,7,0"
+
 "CTRL+ALT+SUPER+SHIFT+1" = "tag,1,0"
 "CTRL+ALT+SUPER+SHIFT+2" = "tag,2,0"
 "CTRL+ALT+SUPER+SHIFT+3" = "tag,3,0"
@@ -38,11 +52,28 @@
 "CTRL+ALT+SUPER+SHIFT+6" = "tag,6,0"
 "CTRL+ALT+SUPER+SHIFT+7" = "tag,7,0"
 
-"none+XF86AudioRaiseVolume" = "spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-"none+XF86AudioLowerVolume" = "spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-"none+XF86AudioMute" = "spawn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"CTRL+ALT+SUPER+comma" = "viewtoleft,0"
+"CTRL+ALT+SUPER+period" = "viewtoright,0"
+"CTRL+ALT+SUPER+SHIFT+comma" = "tagtoleft,0"
+"CTRL+ALT+SUPER+SHIFT+period" = "tagtoright,0"
+
+"XF86AudioRaiseVolume" = "spawn,wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
+"XF86AudioLowerVolume" = "spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"XF86AudioMute" = "spawn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioMicMute" = "spawn,wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+"XF86AudioPlay" = "spawn,playerctl play-pause"
+"XF86AudioNext" = "spawn,playerctl next"
+"XF86AudioPrev" = "spawn,playerctl previous"
 
 [mousebind.default]
 
 "CTRL+ALT+SUPER+btn_left" = "moveresize,curmove"
 "CTRL+ALT+SUPER+btn_right" = "moveresize,curresize"
+
+# Touchpad only, delete if you don't need it
+[gesturebind.default]
+
+"none+up+4" = "enteroverview"
+"none+down+4" = "leaveoverview"
+"none+left+4" = "viewtoright_have_client"
+"none+right+4" = "viewtoleft_have_client"
