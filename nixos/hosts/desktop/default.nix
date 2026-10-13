@@ -6,6 +6,7 @@
 
     ../../modules/system
 
+    ../../modules/system/hardware/amd
 
     ../../modules/packages/cli
     ../../modules/packages/wm
