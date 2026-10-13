@@ -3,6 +3,14 @@
 
   imports = [
     ./hardware-configuration.nix
+
+    ../../modules/system
+
+
+    ../../modules/packages/cli
+    ../../modules/packages/wm
+    ../../modules/packages/gui
+    ../../modules/packages/shell
   ];
 
   nixpkgs.config.allowUnfree = true;
