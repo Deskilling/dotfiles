@@ -6,8 +6,7 @@
     ./desktop
     ./displaymanager
     ./fonts
-    ./hardware/firmware
-    ./hardware/graphics
+    ./hardware
     ./keyd
     ./locale
     ./network
