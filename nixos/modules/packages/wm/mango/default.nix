@@ -8,7 +8,8 @@
     rio
     
     noctalia
-    
+
+    wlr-randr
     wl-clipboard
     brightnessctl
   ];

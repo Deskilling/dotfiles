@@ -1,6 +1,6 @@
 [global]
 source = ["./animations.toml", "./binds.toml", "./layouts.toml"]
-exec_once =["noctalia"]
+exec_once = ["noctalia", "wlr-randr --output DP-1 --mode 2560x1440@143.856003"]
 
 auto_reload_config = 1
 
