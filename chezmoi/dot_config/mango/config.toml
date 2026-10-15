@@ -1,0 +1,19 @@
+[global]
+source = [
+    "./animations.toml",
+    "./appearance.toml",
+    "./binds.toml",
+    "./colors.toml",
+    "./env.toml",
+    "./input.toml",
+    "./layouts.toml",
+    "./misc.toml",
+    "./rules.toml",
+    "./visuals.toml"
+]
+
+exec_once = [
+    "noctalia",
+]
+
+auto_reload_config = 1

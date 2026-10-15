@@ -1,0 +1,26 @@
+add_newline = false
+format = """
+[╭](dimmed) $username@$hostname $directory$env_var
+[╰](dimmed) $character
+"""
+
+[character]
+error_symbol = "[❯](fg:1)"
+success_symbol = "[❯](fg:2)"
+
+[directory]
+format = "[$path](fg:5) "
+truncate_to_repo = false
+truncation_length = 0
+
+[env_var]
+format = "[❄ flake](fg:4)"
+variable = "DIRENV_DIR"
+
+[hostname]
+format = "$hostname"
+ssh_only = false
+
+[username]
+format = "[$user](fg:5)"
+show_always = true
