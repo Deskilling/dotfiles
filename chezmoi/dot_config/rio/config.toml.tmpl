@@ -1,0 +1,30 @@
+# See the full configuration reference: https://rioterm.com/docs/config
+
+{{ if .matugen -}}
+theme = "matugen"
+{{- else -}}
+theme = "67"
+{{- end }}
+
+confirm-before-quit = false
+copy-on-select = false
+
+[editor]
+program = "micro"
+args = []
+
+[effects]
+trail-cursor = true
+trail-cursor-color = "#F07178"
+trail-cursor-opacity = 0.5
+trail-cursor-decay = [100, 400]
+trail-cursor-start-threshold = 2
+
+# NativeTab for Macos is busted with Aerospace
+[navigation]
+mode = "Tab"
+
+[window]
+opacity = 0.5
+blur = true
+decorations = "enabled"

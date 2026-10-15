@@ -6,6 +6,7 @@
     ./fastfetch
     ./git
     ./lazygit
+    ./matugen
     ./micro
     ./nix
   ];

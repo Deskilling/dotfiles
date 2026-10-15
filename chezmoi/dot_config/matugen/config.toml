@@ -1,0 +1,45 @@
+[config]
+# templates from:
+# https://github.com/noctalia-dev/community-templates
+# https://github.com/InioX/matugen-themes/
+# https://github.com/AvengeMedia/DankMaterialShell/tree/master/quickshell/matugen/templates
+# https://github.com/Abhra00/Matuprland/tree/main/matugen/templates
+
+[templates.discord]
+input_path = "~/.config/matugen/templates/discord.css"
+output_path = "~/.config/Vencord/themes/discord-midnight.css"
+
+
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/gtk3.css"
+output_path = "~/.config/gtk-3.0/matugen.css"
+
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/gtk4.css"
+output_path = "~/.config/gtk-4.0/matugen.css"
+
+[templates.mango]
+input_path = "~/.config/matugen/templates/mango.toml"
+output_path = "~/.config/mango/colors.toml"
+
+[templates.noctalia]
+input_path = "~/.config/matugen/templates/noctalia.json"
+output_path = "~/.config/noctalia/palettes/matugen.json"
+post_hook = "noctalia msg config-reload"
+
+[templates.prismlauncher]
+input_path = "~/.config/matugen/templates/prismlauncher.json"
+output_path = "~/.local/share/PrismLauncher/themes/Matugen/theme.json"
+
+[templates.pywalfox]
+input_path = "~/.config/matugen/templates/pywalfox.json"
+output_path = "~/.cache/wal/colors.json"
+post_hook = "pywalfox update"
+
+[templates.rio]
+input_path = "~/.config/matugen/templates/rio.toml"
+output_path = "~/.config/rio/themes/matugen.toml"
+
+[templates.zed]
+input_path = "~/.config/matugen/templates/zed.json"
+output_path = "~/.config/zed/themes/matugen.json"

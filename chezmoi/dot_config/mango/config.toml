@@ -1,5 +1,19 @@
 [global]
-source = ["./animations.toml", "./appearance.toml", "./binds.toml", "./env.toml", "./input.toml", "./layouts.toml", "./misc.toml", "./rules.toml", "./visuals.toml"]
-exec_once = ["noctalia", "wlr-randr --output DP-1 --mode 2560x1440@143.856003"]
+source = [
+    "./animations.toml",
+    "./appearance.toml",
+    "./binds.toml",
+    "./colors.toml",
+    "./env.toml",
+    "./input.toml",
+    "./layouts.toml",
+    "./misc.toml",
+    "./rules.toml",
+    "./visuals.toml"
+]
+
+exec_once = [
+    "noctalia",
+]
 
 auto_reload_config = 1
