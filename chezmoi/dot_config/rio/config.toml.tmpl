@@ -3,7 +3,7 @@
 {{ if .matugen -}}
 theme = "matugen"
 {{- else -}}
-theme = "67"
+theme = "catppuccin-mocha"
 {{- end }}
 
 confirm-before-quit = false
@@ -28,3 +28,7 @@ mode = "Tab"
 opacity = 0.5
 blur = true
 decorations = "enabled"
+
+[shell]
+program = "fish"
+args = ["--login"]
