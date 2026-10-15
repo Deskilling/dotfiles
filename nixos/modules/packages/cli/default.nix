@@ -8,6 +8,7 @@
     ./lazygit
     ./matugen
     ./micro
+    ./nh
     ./nix
   ];
 }
