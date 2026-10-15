@@ -1,6 +1,6 @@
 [bind.default]
 
-"CTRL+ALT+SUPER+space" = "spawn,noctalia msg panel-toggle launcher"
+"CTRL+ALT+SUPER+space" = "spawn,rofi -show drun"
 "CTRL+ALT+SUPER+Return" = "spawn,rio"
 
 "CTRL+ALT+SUPER+SHIFT+Escape" = "quit"

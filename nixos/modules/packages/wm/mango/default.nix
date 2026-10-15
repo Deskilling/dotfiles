@@ -9,6 +9,8 @@
     
     noctalia
 
+    rofi
+
     wlr-randr
     wl-clipboard
     brightnessctl
