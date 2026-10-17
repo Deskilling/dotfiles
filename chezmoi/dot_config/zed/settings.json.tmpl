@@ -35,7 +35,12 @@
 
   "ui_font_size": 16,
   "buffer_font_size": 15,
+
+  {{ if .matugen -}}
+  "theme": "Noctalia Dark Transparent",
+  {{- else -}}
   "theme": "Catppuccin Mocha",
+  {{- end }}
 
   "icon_theme": {
     "mode": "dark",
