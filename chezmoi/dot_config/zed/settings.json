@@ -1,0 +1,95 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "catppuccin-icons": true,
+  },
+  "suggest_extensions": false,
+
+  "lsp": {
+    // just keeping this here for reference
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy", // rust-analyzer.check.command (default: "check")
+        },
+      },
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "keyOrdering": true, // Enforces alphabetical ordering of keys in maps
+        },
+      },
+    },
+  },
+
+  "bottom_dock_layout": "full",
+
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": "Catppuccin Mocha",
+
+  "icon_theme": {
+    "mode": "dark",
+    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Mocha",
+  },
+
+  "auto_signature_help": true,
+
+  "diagnostics_max_severity": "hint",
+  "disable_ai": true,
+  "double_click_in_multibuffer": "open",
+
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false,
+    "agent_review": false,
+    "code_actions": false,
+  },
+
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "all",
+  },
+
+  "status_bar": {
+    "show_active_file": true,
+    "cursor_position_button": false,
+  },
+
+  "format_on_save": "modifications_if_available",
+
+  "file_types": {
+    "C++": ["hpp", "cpp", "cc"],
+    "C": ["c", "h"],
+    "JSON": ["json"],
+  },
+
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+      "padding": 4,
+      "max_severity": "warning",
+    },
+  },
+
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+
+  "terminal": {
+    "button": false,
+  },
+}
