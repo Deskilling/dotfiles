@@ -5,10 +5,14 @@
 # https://github.com/AvengeMedia/DankMaterialShell/tree/master/quickshell/matugen/templates
 # https://github.com/Abhra00/Matuprland/tree/main/matugen/templates
 
+[templates.btop]
+input_path = "~/.config/matugen/templates/btop.theme"
+output_path = "~/.config/btop/themes/matugen.theme"
+post_hook = "~/.config/matugen/scripts/btop.sh"
+
 [templates.discord]
 input_path = "~/.config/matugen/templates/discord.css"
 output_path = "~/.config/Vencord/themes/discord-midnight.css"
-
 
 [templates.gtk3]
 input_path = "~/.config/matugen/templates/gtk3.css"
@@ -39,6 +43,8 @@ post_hook = "pywalfox update"
 [templates.rio]
 input_path = "~/.config/matugen/templates/rio.toml"
 output_path = "~/.config/rio/themes/matugen.toml"
+post_hook = "touch ~/.config/rio/config.toml"
+
 
 [templates.zed]
 input_path = "~/.config/matugen/templates/zed.json"
