@@ -16,11 +16,11 @@ output_path = "~/.config/Vencord/themes/discord-midnight.css"
 
 [templates.gtk3]
 input_path = "~/.config/matugen/templates/gtk3.css"
-output_path = "~/.config/gtk-3.0/matugen.css"
+output_path = "~/.config/gtk-3.0/gtk.css"
 
 [templates.gtk4]
 input_path = "~/.config/matugen/templates/gtk4.css"
-output_path = "~/.config/gtk-4.0/matugen.css"
+output_path = "~/.config/gtk-4.0/gtk.css"
 
 [templates.mango]
 input_path = "~/.config/matugen/templates/mango.toml"
@@ -45,6 +45,9 @@ input_path = "~/.config/matugen/templates/rio.toml"
 output_path = "~/.config/rio/themes/matugen.toml"
 post_hook = "touch ~/.config/rio/config.toml"
 
+[templates.rofi]
+input_path = "~/.config/matugen/templates/rofi.rasi"
+output_path = "~/.config/rofi/colors.rasi"
 
 [templates.zed]
 input_path = "~/.config/matugen/templates/zed.json"
