@@ -1,0 +1,20 @@
+services:
+  pufferpanel:
+    container_name: pufferpanel
+    env_file:
+      - env.env
+    image: pufferpanel/pufferpanel:latest
+    ports:
+      - "8080:8080"
+      - "5657:5657"
+
+      - "25560-25570:25560-25570"
+    restart: on-failure
+    volumes:
+      - ./pufferpanel-config:/etc/pufferpanel
+      - ./pufferpanel-servers:/var/lib/pufferpanel:z
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  pufferpanel-config:
+  pufferpanel-servers:
