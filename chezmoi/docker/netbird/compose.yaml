@@ -1,0 +1,19 @@
+services:
+  netbird-client:
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_RESOURCE
+    container_name: netbird-client
+    devices:
+      - /dev/net/tun
+    env_file:
+      - env.env
+    hostname: Raspberry-Pi-5
+    image: netbirdio/netbird:latest
+    network_mode: host
+    volumes:
+      - ./netbird-client:/var/lib/netbird
+volumes:
+  netbird-client:
+    name: netbird-client
