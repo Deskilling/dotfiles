@@ -14,6 +14,7 @@ services:
     network_mode: host
     volumes:
       - ./netbird-client:/var/lib/netbird
+
 volumes:
   netbird-client:
     name: netbird-client
