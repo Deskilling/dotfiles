@@ -10,7 +10,10 @@
 
     ../../modules/packages/cli
     ../../modules/packages/wm
+
     ../../modules/packages/gui
+    ../../modules/packages/gui/intellij
+
     ../../modules/packages/shell
   ];
 
