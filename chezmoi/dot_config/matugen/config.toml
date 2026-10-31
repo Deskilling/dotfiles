@@ -22,6 +22,10 @@ output_path = "~/.config/gtk-3.0/gtk.css"
 input_path = "~/.config/matugen/templates/gtk4.css"
 output_path = "~/.config/gtk-4.0/gtk.css"
 
+[templates.hypr]
+input_path = "~/.config/matugen/templates/hypr.lua"
+output_path = "~/.config/hypr/colors.lua"
+
 [templates.mango]
 input_path = "~/.config/matugen/templates/mango.toml"
 output_path = "~/.config/mango/colors.toml"
