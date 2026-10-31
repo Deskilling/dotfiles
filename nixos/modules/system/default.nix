@@ -10,6 +10,7 @@
     ./keyd
     ./locale
     ./network
+    ./nix-ld
     ./users
   ];
 }
