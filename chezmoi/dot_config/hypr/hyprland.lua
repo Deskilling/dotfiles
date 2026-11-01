@@ -20,7 +20,7 @@ hl.config({
         -- https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/
         allow_tearing    = true,
 
-        layout           = "scrolling",
+        layout           = "dwindle",
     },
 
     decoration = {
@@ -30,26 +30,25 @@ hl.config({
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
 
-        blur             = {
+        blur = {
             enabled  = true,
-            size     = 6,
-            passes   = 2,
-            vibrancy = 0.1696,
+            size     = 3,
+            passes = 2,
+        },
+
+        wobble = {
+            enabled          = true,
+            mesh             = 12,    -- default is fine, higher is smoother but costs GPU
+            stiffness        = 250,   -- a bit snappier than the default 200
+            damping          = 20,    -- default 12 bounces a lot, this settles after a swing or two
+            mass             = 1,
+            intensity        = 0.15,  -- slightly gentler than the default 0.2
+            value_epsilon    = 0.25,
+            velocity_epsilon = 2,
         },
     },
 
     animations = {
         enabled = true,
-    },
-
-    scrolling = {
-        column_width = 0.5,
-    },
-})
-
--- https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/
-hl.config({
-    scrolling = {
-        fullscreen_on_one_column = true,
     },
 })

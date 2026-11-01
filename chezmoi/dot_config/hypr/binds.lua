@@ -4,11 +4,8 @@ hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd("rio"))
 
-hl.bind(mod .. " + E", hl.dsp.layout("move +col"))
-hl.bind(mod .. " + Q", hl.dsp.layout("move -col"))
-hl.bind(mod .. " + Z", hl.dsp.layout("tiling"))
-hl.bind(mod .. " + F", hl.dsp.layout("colresize 1.0"))
-hl.bind(mod .. " + D", hl.dsp.layout("colresize 0.5"))
+hl.bind(mod .. " + E", hl.dsp.focus({ direction = "right" }))
+hl.bind(mod .. " + Q", hl.dsp.focus({ direction = "left" }))
 
 hl.bind(mod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mod .. " + down", hl.dsp.focus({ direction = "down" }))
