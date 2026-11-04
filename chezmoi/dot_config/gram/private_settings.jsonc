@@ -1,0 +1,50 @@
+{
+  "ui_font_family": ".GramSans",
+  "buffer_font_family": "JetBrains Mono",
+  "theme": "Catppuccin Mocha",
+  "icon_theme": "Catppuccin Mocha",
+  "project_panel": {
+    "folder_icons": true,
+    "file_icons": true,
+    "dock": "right"
+  },
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15.0,
+
+  "double_click_in_multibuffer": "open",
+
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+  },
+
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "all",
+  },
+
+  "status_bar": {
+    "show_active_file": true,
+    "cursor_position_button": false,
+  },
+
+  "format_on_save": "on",
+
+  "file_types": {
+    "C++": ["hpp", "cpp", "cc"],
+    "C": ["c", "h"],
+  },
+
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+      "padding": 4,
+      "max_severity": "warning",
+    },
+  },
+
+  "terminal": {
+    "button": false,
+  },
+}
