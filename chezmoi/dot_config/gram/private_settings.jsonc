@@ -1,4 +1,5 @@
 {
+  "base_keymap": "SublimeText",
   "ui_font_family": ".GramSans",
   "buffer_font_family": "JetBrains Mono",
   "theme": "Catppuccin Mocha",
