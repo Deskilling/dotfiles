@@ -5,6 +5,7 @@
     ./essential
     ./firefox
     ./games
+    ./obs
     ./zed
   ];
 }
