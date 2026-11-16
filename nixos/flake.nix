@@ -1,8 +1,6 @@
 {
   inputs = {
-    nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     mangowm = {
       url = "github:mangowm/mango";
@@ -17,15 +15,19 @@
 
   outputs =
     { nixpkgs, ... }@inputs:
+    let
+      mkHost =
+        name:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/${name}
+            ./modules
+            { networking.hostName = name; }
+          ];
+        };
+    in
     {
-      nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [ ./hosts/vm ];
-      };
-
-      nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [ ./hosts/desktop ];
-      };
+      nixosConfigurations = nixpkgs.lib.genAttrs [ "desktop" "vm" ] mkHost;
     };
 }

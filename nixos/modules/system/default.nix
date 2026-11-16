@@ -1,16 +1,13 @@
 {
   imports = [
-    ./audio
-    ./bluetooth
-    ./boot
-    ./desktop
-    ./displaymanager
-    ./fonts
-    ./hardware
-    ./keyd
-    ./locale
-    ./network
-    ./nix-ld
-    ./users
+    ./audio.nix
+    ./bluetooth.nix
+    ./boot.nix
+    ./hardware.nix
+    ./keyd.nix
+    ./locale.nix
+    ./network.nix
+    ./nix-ld.nix
+    ./users.nix
   ];
 }
