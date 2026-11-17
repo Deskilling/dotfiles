@@ -19,3 +19,4 @@ swipe_min_threshold = 1
 # mouse
 # need relogin to make it apply
 mouse_natural_scrolling = 0
+mouse_accel_profile = 1

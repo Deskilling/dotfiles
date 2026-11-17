@@ -7,48 +7,13 @@ primary = 1
 x = 0
 y = 0
 
-[[rule.tag_rule]]
-id = 1
-layout_name = "tile"
-
-[[rule.tag_rule]]
-id = 2
-layout_name = "tile"
-
-[[rule.tag_rule]]
-id = 3
-layout_name = "tile"
-
-[[rule.tag_rule]]
-id = 4
-layout_name = "tile"
-
-[[rule.tag_rule]]
-id = 5
-layout_name = "tile"
-
-[[rule.tag_rule]]
-id = 6
-layout_name = "tile"
-
-[[rule.tag_rule]]
-id = 7
-layout_name = "tile"
-
-[[rule.tag_rule]]
-id = 8
-layout_name = "tile"
-
-[[rule.tag_rule]]
-id = 9
-layout_name = "tile"
-
-# layer rule
-
 [[rule.layer_rule]]
+layer_name = "rofi"
 animation_type_open = "zoom"
-layer_name = "rofi"
-
-[[rule.layer_rule]]
 animation_type_close = "zoom"
-layer_name = "rofi"
+
+[[rule.window_rule]]
+app_id = "^xdg-desktop-portal-gtk$"
+is_floating = 1
+width = 0.5
+height = 0.6
