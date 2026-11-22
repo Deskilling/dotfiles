@@ -1,0 +1,7 @@
+{{- $nix := promptBoolOnce . "nix" "Is this a NixOS machine" -}}
+{{- $matugen := promptBoolOnce . "matugen" "Use matugen colors" -}}
+sourceDir = "{{ .chezmoi.homeDir }}/dotfiles"
+
+[data]
+    nix = {{ $nix }}
+    matugen = {{ $matugen }}
