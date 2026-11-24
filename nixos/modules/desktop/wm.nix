@@ -7,7 +7,6 @@
   services.gnome.sushi.enable = true;
 
   environment.systemPackages = with pkgs; [
-    noctalia
     rofi
     rio
     nautilus

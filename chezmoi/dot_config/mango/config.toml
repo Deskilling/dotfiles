@@ -9,11 +9,9 @@ source = [
     "./layouts.toml",
     "./misc.toml",
     "./rules.toml",
-    "./visuals.toml"
+    "./visuals.toml",
 ]
 
-exec_once = [
-    "noctalia",
-]
+exec_once = ["quickshell"]
 
 auto_reload_config = 1

@@ -1,4 +1,9 @@
-{ lib, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 {
   imports = [
     ./hardware-configuration.nix
@@ -14,4 +19,11 @@
   '';
 
   system.stateVersion = "26.05";
+
+  environment.systemPackages = [
+    inputs.saft.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
+  hardware.logitech.wireless.enable = true;
+  hardware.wooting.enable = true;
 }

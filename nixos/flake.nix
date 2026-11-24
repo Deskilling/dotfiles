@@ -11,6 +11,11 @@
       url = "github:Deskilling/cde";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    saft = {
+      url = "git+file:///home/leif/.config/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
