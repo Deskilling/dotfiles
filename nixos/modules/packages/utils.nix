@@ -5,6 +5,5 @@
     file-roller
     gnome-disk-utility
     baobab
-    mission-center
   ];
 }
